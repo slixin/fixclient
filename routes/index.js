@@ -6,7 +6,8 @@ var utils = require("./utils.js");
 var router = express.Router();
 var moment = require('moment');
 var now = require('performance-now');
-
+var jsonfile = require('jsonfile');
+var path = require('path');
 var log = new Log('ERROR');
 
 var handleOrder = function(client, message) {
@@ -91,13 +92,69 @@ var handleOrder = function(client, message) {
     }
 }
 
-router.post('/client', function(req, res) {
-    var clients = [];
+var save_config = function(cb) {
+    var client_config = [];
+    var file = path.resolve('data.json');
 
     if (global.clients.size > 0) {
-        var client_id = req.body.id;
+        global.clients.forEach(function(client) {
+            client_config.push({
+                id: client.id,
+                setting: client.setting
+            });
+        })
+        jsonfile.writeFile(file, client_config, function (err) {
+            if (err) {
+                cb(err);
+            } else {
+                cb(null);
+            }
+        });
+    } else {
+        cb(null);
+    }
+}
 
-        if (client_id == undefined) {
+router.post('/client', function(req, res) {
+    var clients = [];
+    var client_id = req.body.id;
+    var file = path.resolve('data.json');
+
+    if (client_id == undefined) {
+        if (global.clients.size == 0) {
+            jsonfile.readFile(file, function(err, obj) {
+                if (err) {
+                    res.status(400).send({ error: err });
+                } else {
+                    var j_clients = obj;
+                    j_clients.forEach(function(client) {
+                        var new_client = {
+                            'id': client.id,
+                            'setting': client.setting,
+                            'instance': null,
+                            'messages': [],
+                            'isconnected': false,
+                            'storemsg': true,
+                            'orders': []
+                        }
+                        global.clients.set(client.id, new_client);
+                    });
+                    global.clients.forEach(function (value, key) {
+                        var client = {
+                            id: key,
+                            setting: value.setting,
+                            inbound: value.messages.filter(function(o) { return o.direction == 0 }).length,
+                            outbound: value.messages.filter(function(o) { return o.direction == 1 }).length,
+                            orders: value.orders.length,
+                            active_orders: value.orders.filter(function(o) { return o.ordStatus != 2 }).length,
+                            isconnected: value.isconnected
+                        }
+                        clients.push(client);
+                    });
+                    res.send(clients);
+                }
+            })
+        } else {
             global.clients.forEach(function (value, key) {
                 var client = {
                     id: key,
@@ -111,8 +168,10 @@ router.post('/client', function(req, res) {
                 clients.push(client);
             });
             res.send(clients);
-        } else {
-            var client = global.clients.get(client_id);
+        }
+    } else {
+        var client = global.clients.get(client_id);
+        if (client != undefined) {
             res.send({
                 id: client_id,
                 setting: client.setting,
@@ -123,8 +182,6 @@ router.post('/client', function(req, res) {
                 isconnected: client.isconnected
             });
         }
-    } else {
-        res.status(400).send( {error: 'No clients yet'} );
     }
 });
 
@@ -152,6 +209,7 @@ router.post('/client/create', function(req, res) {
 
         var client_id = host + "|" + port + "|" + version + "-" + senderid + "-" + targetid;
         var new_client = {
+            'id': client_id,
             'setting': {
                 'senderid': senderid,
                 'targetid': targetid,
@@ -166,11 +224,36 @@ router.post('/client/create', function(req, res) {
             'messages': [],
             'isconnected': false,
             'storemsg': true,
-            'orders': [],
+            'orders': []
         };
 
         global.clients.set(client_id, new_client);
-        res.send({id: client_id});
+        save_config(function(err) {
+            if (err) res.status(400).send({ error: err });
+            else res.send({id: client_id});
+        });
+    }
+});
+
+router.post('/client/delete', function(req, res) {
+    req.checkBody("id", "Client ID is required.").notEmpty();
+
+    var errors = req.validationErrors();
+    if (errors) {
+        log.error("ERROR:"+errors);
+        res.status(400).send( {error: errors});
+    } else {
+        var client_id = req.body.id;
+
+        if (global.clients.has(client_id)) {
+            global.clients.delete(client_id);
+            save_config(function(err) {
+                if (err) res.status(400).send({ error: err });
+                else res.send({});
+            });
+        } else {
+            res.status(400).send( { error: 'Client '+ client_id+ ' does not exists.' } );
+        }
     }
 });
 
@@ -285,25 +368,6 @@ router.post('/client/logoff', function(req, res) {
         if (global.clients.has(client_id)) {
             var client = global.clients.get(client_id);
             client.instance.sendLogoff();
-            res.send({});
-        } else {
-            res.status(400).send( { error: 'Client '+ client_id+ ' does not exists.' } );
-        }
-    }
-});
-
-router.post('/client/delete', function(req, res) {
-    req.checkBody("id", "Client ID is required.").notEmpty();
-
-    var errors = req.validationErrors();
-    if (errors) {
-        log.error("ERROR:"+errors);
-        res.status(400).send( {error: errors});
-    } else {
-        var client_id = req.body.id;
-
-        if (global.clients.has(client_id)) {
-            global.clients.delete(client_id);
             res.send({});
         } else {
             res.status(400).send( { error: 'Client '+ client_id+ ' does not exists.' } );
