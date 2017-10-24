@@ -1,0 +1,66 @@
+<form name="form.clientForm" ng-submit="submitForm(client)" novalidate>
+
+<div class="modal-header">
+    <h3>FIX Client</h3>
+</div>
+<div class="modal-body">
+        <!-- HOST -->
+        <div class="form-group">
+            <label>Host</label>
+            <input type="text" name="host" class="form-control" ng-model="client.host" required>
+            <p ng-show="form.clientForm.host.$invalid && !form.clientForm.host.$pristine" class="help-block">Host is required.</p>
+        </div>
+
+        <!-- PORT -->
+        <div class="form-group">
+            <label>Port</label>
+            <input type="text" name="port" class="form-control" ng-model="client.port" required>
+            <p ng-show="form.clientForm.port.$invalid && !form.clientForm.port.$pristine" class="help-block">Port is required.</p>
+        </div>
+
+        <!-- SENDER -->
+        <div class="form-group">
+            <label>Sender</label>
+            <input type="text" name="sender" class="form-control" ng-model="client.sender" required>
+            <p ng-show="form.clientForm.sender.$invalid && !form.clientForm.sender.$pristine" class="help-block">Sender is required.</p>
+        </div>
+
+        <!-- TARGET -->
+        <div class="form-group">
+            <label>Target</label>
+            <input type="text" name="target" class="form-control" ng-model="client.target" required>
+            <p ng-show="form.clientForm.target.$invalid && !form.clientForm.target.$pristine" class="help-block">Target is required.</p>
+        </div>
+
+        <!-- VERSION -->
+        <div class="form-group">
+            <label>Fix Version</label>
+            <input type="text" name="version" class="form-control" ng-model="client.version" required>
+            <p ng-show="form.clientForm.version.$invalid && !form.clientForm.version.$pristine" class="help-block">Version is required.</p>
+        </div>
+
+        <!-- DICTIONARY -->
+        <div class="form-group">
+            <label>Fix Dictionary</label>
+            <input type="text" name="dictionary" class="form-control" ng-model="client.dictionary" required>
+            <p ng-show="form.clientForm.dictionary.$invalid && !form.clientForm.dictionary.$pristine" class="help-block">Dictionary is required.</p>
+        </div>
+
+        <!-- RESETSEQNUM -->
+        <div class="form-group">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" ng-model="client.reset_seqnum"> Reset Sequence number when logon
+            </label>
+        </div>
+
+        <!-- OPTIONS -->
+        <!-- <div class="form-group">
+          <label>Options</label>
+            <input type="text" name="options" class="form-control" ng-model="client.options">
+        </div> -->
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary" ng-disabled="form.clientForm.$invalid">Save</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+</form>

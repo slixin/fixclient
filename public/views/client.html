@@ -1,0 +1,157 @@
+<div class="row page-header">
+        <div class="col-xs-8">
+            <span class="lead"><strong>{{client.id}}</strong></span>
+        </div>
+        <div class="col-xs-4 text-right">
+            <button class="btn btn-default" ng-click="onConnect(client)"  title="Connect" ng-disabled="client.isconnected == true"><i class="fa fa-toggle-on" aria-hidden="true"></i> Connect</button>
+            <button class="btn btn-default" ng-click="onDisconnect(client)" title="Disconnect" ng-disabled="client.isconnected == false"><i class="fa fa-toggle-off" aria-hidden="true"></i> Disconnect</button>
+            <button class="btn btn-danger" ng-click="onDelete(client)"  title="Delete" ng-disabled="client.isconnected == true"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        </div>
+    </div>
+<div class="page-body">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapseInfo" >
+                  <span><b>Session Information</b></span> <i class="fa fa-spinner fa-spin fa-fw" ng-show="isRefreshing.session_info"></i>
+              </div>
+              <div class="panel-body">
+                <div id="collapseInfo" class="panel-collapse collapse out"  ng-mouseenter="onSessionInformationPanel()" ng-mouseleave="offSessionInformationPanel()">
+                    <ul class="list-group">
+                      <li class="list-group-item"><label>Host:</label> <span>{{client.setting.host}}</span></li>
+                      <li class="list-group-item"><label>Port:</label> <span>{{client.setting.port}}</span></li>
+                      <li class="list-group-item"><label>Sender:</label> <span>{{client.setting.senderid}}</span></li>
+                      <li class="list-group-item"><label>Target:</label> <span>{{client.setting.targetid}}</span></li>
+                      <li class="list-group-item"><label>Version:</label> <span>{{client.setting.version}}</span></li>
+                      <li class="list-group-item"><label>Dictionary:</label> <span>{{client.setting.dictionary}}</span></li>
+                      <li class="list-group-item"><label>Reset Seqnum:</label> <span>{{client.setting.reset_seqnum}}</span></li>
+                      <li class="list-group-item"><label>Incoming Seqnum:</label> <span>{{client.setting.options.incomingSeqNum}}</span></li>
+                      <li class="list-group-item"><label>Outgoing Seqnum:</label> <span>{{client.setting.options.outgoingSeqNum}}</span></li>
+                      <li class="list-group-item"><label>Inbound #:</label> <span>{{client.inbound}}</span></li>
+                      <li class="list-group-item"><label>Outbound #:</label> <span>{{client.outbound}}</span></li>
+                      <li class="list-group-item"><label>Orders #:</label> <span>{{client.orders}}</span></li>
+                      <li class="list-group-item"><label>Active Orders #:</label> <span>{{client.active_orders}}</span></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapseViewer" >
+                  <span><b>Message Viewer</b></span>
+              </div>
+              <div class="panel-body">
+                <div id="collapseViewer" class="panel-collapse collapse in">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" ng-model="ignoreCommonFields" ng-disabled="selectedItem == null"> Ignore common fields
+                    </label>
+                    <table st-table="itemFields" st-safe-src="selectedItem" class="table table-striped table-bordered  table-hover">
+                      <tr ng-repeat="itemField in itemFields">
+                        <td> {{itemField.name}} </td> <td> {{ itemField.value }} </td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapseSender">
+                  <span><b>Message Sender</b></span>
+              </div>
+              <div class="panel-body">
+                <div  id="collapseSender" class="panel-collapse collapse in" class="form-group" >
+                    <div class="form-group">
+                        <form class="form-inline" role="form">
+                          <div class="form-group">
+                            <bs-dropdown data-menu-type="button" select-val="message.mode = selectedVal" preselected-item="message.mode" data-dropdown-data="messagemodes"></bs-dropdown>
+                          </div>
+                          <div class="form-group" ng-show="message.mode == 2">
+                            <input type="text" name="count" class="form-control" ng-model="message.count" placeholder='Count'>
+                          </div>
+                          <div class="form-group" ng-show="message.mode == 3">
+                            <input type="text" name="count" class="form-control" ng-model="message.duration" placeholder='Duration (Seconds)'>
+                            <input type="text" name="count" class="form-control" ng-model="message.tps" placeholder='TPS'>
+                          </div>
+                        </form>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <textarea id="message" style="max-width: 100%" rows="2" class="form-control" ng-model="message.text" style="resize:none" />
+                            <span class="input-group-addon btn btn-primary" ng-click="onSend()" ng-disabled="!message.text.trim() || client.isconnected == false"><i class="fa fa-paper-plane"></i> Send</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapseLog">
+                  <span><b>Message Logs</b></span>
+              </div>
+              <div class="panel-body">
+                <div id="collapseLog" class="panel-collapse collapse in">
+                    <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped table-bordered  table-hover">
+                      <thead>
+                        <tr>
+                            <th colspan="3">
+                                <form class="form-inline">
+                                    <input type="text" name="max" class="form-control" ng-model="max_log_count" title="Max Log Count">
+                                    <button class="btn btn-default" ng-click="onRefresh()"  title="Refresh" ng-disabled="client.isconnected == false"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</button>
+                                    <button class="btn btn-default" ng-click="onErase()" title="Erase" ng-disabled="client.isconnected == false"><i class="fa fa-eraser" aria-hidden="true"></i> Erase</button>
+                                    <bs-dropdown data-menu-type="button" select-val="selected_viewmode = selectedVal" preselected-item="selected_viewmode" data-dropdown-data="viewmodes"></bs-dropdown>
+                                </form>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="3"><input st-search class="input-sm form-control" type="search"/></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="row in displayedCollection" st-select-row="row" st-select-mode="single" st-selected="rowSelected()">
+                          <td width="30" class="{{row.direction ? 'info' : ''}}"><div class="timeline-badge"><i class="{{row.direction ? 'fa fa-chevron-circle-down' : 'fa fa-chevron-circle-up'}}"  title="{{row.direction ? 'In' : 'Out'}}"></i></div></td>
+                          <td width="170">{{row.time}}</td>
+                          <td class="is-breakable">{{row.display}}</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="4" class="text-center">
+                            <div st-pagination="" st-items-by-page="20" st-displayed-pages="10"></div>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="panel panel-default" ng-mouseenter="onActivePersistentRunsPanel()" ng-mouseleave="offActivePersistentRunsPanel()">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapsePersistent">
+                  <span><b>Active Persistent Runs</b></span>
+                  <i class="fa fa-spinner fa-spin fa-fw" ng-show="isRefreshing.active_persistent"></i>
+              </div>
+              <div class="panel-body">
+                <div id="collapsePersistent" class="panel-collapse collapse in">
+                    <table st-table="persistentCollection" st-safe-src="persistents" class="table table-striped table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th title="Duration">D(s)</th>
+                                <th>TPS</th>
+                                <th title="Escapted">E(s)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="persistent in persistentCollection">
+                            <td>{{ persistent.duration }}</td>
+                            <td>{{ persistent.tps }}</td>
+                            <td>{{ persistent.escaped }}</td>
+                            <td><button class="btn btn-xs btn-danger" ng-click="onStopPersistent(persistent)" title="Stop"><i class="fa fa-stop" aria-hidden="true"></i></button></td>
+                        </tr>
+                    </table>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+

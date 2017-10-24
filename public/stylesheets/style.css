@@ -1,0 +1,36 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html {
+  background: url(../images/fix.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.st-selected {
+    background: #216eff !important;
+    color: white !important;
+}
+
+.is-breakable {
+  word-break: break-all;
+}
+
+.mainview {
+  background-color: #e8e7e5;
+
+  height: 100%;
+  top: 0;
+  right:0;
+}
+
+.page-header {
+    margin-top:10px;
+}
