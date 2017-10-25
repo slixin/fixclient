@@ -34,3 +34,7 @@ a {
 .page-header {
     margin-top:10px;
 }
+
+.vresize {
+  resize: vertical;
+}

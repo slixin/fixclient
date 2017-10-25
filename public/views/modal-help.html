@@ -1,0 +1,46 @@
+<form name="form.helpForm" novalidate>
+
+<div class="modal-header">
+    <h3>Sender Helper</h3>
+</div>
+<div class="modal-body">
+        <div class="panel panel-default">
+          <div class="panel-heading">There are some wildcard supported in Fix Client, it is wrapped by <strong style="color:red">%% %%</strong></div>
+          <div class="panel-body">
+             <div class="list-group">
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%guid%%</h4>
+                <p class="list-group-item-text">Used to generate an unique GUID string</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%now%%</h4>
+                <p class="list-group-item-text">Used to generate a UTC now time, it supports add/minus time, for example: <strong>%%now+1d%%</strong> means add 1 day to current now time.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%timestamp%%</h4>
+                <p class="list-group-item-text">Used to generate the unix epoch time stamp.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%randomdouble:A:B%%</h4>
+                <p class="list-group-item-text">Used to generate a random float number between A and B, for example: <strong>%%randomdouble:1.0:10.0%%</strong>, it will generate a random number between 1.0 and 10.0.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%randomnumber:length%%</h4>
+                <p class="list-group-item-text">Used to generate a random number, for example: <strong>%%randomnumber:3%%</strong>, it might generate a number 143.</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%randomstring:length:&lt;seed&gt;%%</h4>
+                <p class="list-group-item-text">Used to generate a random string, for example: <strong>%%randomstring:5%%</strong>, it might generate a random string "d4nx2" or <strong>%%randomstring:3:abc%%</strong>, it might generate a random string "bac".</p>
+              </a>
+              <a href="" class="list-group-item">
+                <h4 class="list-group-item-heading">%%exp[&lt;expression&gt;]%%</h4>
+                <p class="list-group-item-text">Used to generate some value which via executing the expressions, for example: <strong>%%exp[2+2]%%</strong>, it will get the value equals to 4.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()">Close</button>
+</div>
+</form>

@@ -35,19 +35,28 @@
                 </div>
               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" data-toggle="collapse" data-target="#collapseViewer" >
-                  <span><b>Message Viewer</b></span>
+            <div class="panel panel-default" >
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapsePersistent">
+                  <span><b>Active Persistent Runs</b></span>
+                  <i class="fa fa-spinner fa-spin fa-fw" ng-show="isRefreshing.active_persistent"></i>
               </div>
               <div class="panel-body">
-                <div id="collapseViewer" class="panel-collapse collapse in">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" ng-model="ignoreCommonFields" ng-disabled="selectedItem == null"> Ignore common fields
-                    </label>
-                    <table st-table="itemFields" st-safe-src="selectedItem" class="table table-striped table-bordered  table-hover">
-                      <tr ng-repeat="itemField in itemFields">
-                        <td> {{itemField.name}} </td> <td> {{ itemField.value }} </td>
-                      </tr>
+                <div id="collapsePersistent" class="panel-collapse collapse in" ng-mouseenter="onActivePersistentRunsPanel()" ng-mouseleave="offActivePersistentRunsPanel()">
+                    <table st-table="persistentCollection" st-safe-src="persistents" class="table table-striped table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th title="Duration">D(s)</th>
+                                <th>TPS</th>
+                                <th title="Escapted">E(s)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="persistent in persistentCollection">
+                            <td>{{ persistent.duration }}</td>
+                            <td>{{ persistent.tps }}</td>
+                            <td>{{ persistent.escaped }}</td>
+                            <td><button class="btn btn-xs btn-danger" ng-click="onStopPersistent(persistent)" title="Stop"><i class="fa fa-stop" aria-hidden="true"></i></button></td>
+                        </tr>
                     </table>
                 </div>
               </div>
@@ -76,9 +85,10 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <textarea id="message" style="max-width: 100%" rows="2" class="form-control" ng-model="message.text" style="resize:none" />
+                            <textarea id="message" style="max-width: 100%" rows="2" class="form-control vresize" ng-model="message.text" />
                             <span class="input-group-addon btn btn-primary" ng-click="onSend()" ng-disabled="!message.text.trim() || client.isconnected == false"><i class="fa fa-paper-plane"></i> Send</span>
                         </div>
+                        <a href="" ng-click="showHelper()" title="Here are some magic tips"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
                     </div>
                 </div>
               </div>
@@ -125,28 +135,19 @@
             </div>
         </div>
         <div class="col-md-2">
-            <div class="panel panel-default" ng-mouseenter="onActivePersistentRunsPanel()" ng-mouseleave="offActivePersistentRunsPanel()">
-              <div class="panel-heading" data-toggle="collapse" data-target="#collapsePersistent">
-                  <span><b>Active Persistent Runs</b></span>
-                  <i class="fa fa-spinner fa-spin fa-fw" ng-show="isRefreshing.active_persistent"></i>
+            <div class="panel panel-default">
+              <div class="panel-heading" data-toggle="collapse" data-target="#collapseViewer" >
+                  <span><b>Message Viewer</b></span>
               </div>
               <div class="panel-body">
-                <div id="collapsePersistent" class="panel-collapse collapse in">
-                    <table st-table="persistentCollection" st-safe-src="persistents" class="table table-striped table-bordered  table-hover">
-                        <thead>
-                            <tr>
-                                <th title="Duration">D(s)</th>
-                                <th>TPS</th>
-                                <th title="Escapted">E(s)</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tr ng-repeat="persistent in persistentCollection">
-                            <td>{{ persistent.duration }}</td>
-                            <td>{{ persistent.tps }}</td>
-                            <td>{{ persistent.escaped }}</td>
-                            <td><button class="btn btn-xs btn-danger" ng-click="onStopPersistent(persistent)" title="Stop"><i class="fa fa-stop" aria-hidden="true"></i></button></td>
-                        </tr>
+                <div id="collapseViewer" class="panel-collapse collapse in">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" ng-model="ignoreCommonFields" ng-disabled="selectedItem == null"> Ignore common fields
+                    </label>
+                    <table st-table="itemFields" st-safe-src="selectedItem" class="table table-striped table-bordered  table-hover">
+                      <tr ng-repeat="itemField in itemFields">
+                        <td> {{itemField.name}} </td> <td> {{ itemField.value }} </td>
+                      </tr>
                     </table>
                 </div>
               </div>

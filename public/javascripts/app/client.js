@@ -1,4 +1,4 @@
-app.controller('ctrlClient', ['$scope','$routeParams', '$window', '$http', '$interval', 'moment','Notification', function($scope, $routeParams, $window, $http, $interval, moment, Notification) {
+app.controller('ctrlClient', ['$scope','$routeParams', '$window', '$http', '$interval', 'moment','$uibModal', 'Notification', function($scope, $routeParams, $window, $http, $interval, moment, $uibModal, Notification) {
     $scope.client_id = $routeParams.clientId;
     $scope.client = null;
     $scope.selectedItem = null;
@@ -22,6 +22,25 @@ app.controller('ctrlClient', ['$scope','$routeParams', '$window', '$http', '$int
     $scope.isRefreshing = {
         active_persistent: false,
         session_info: false
+    };
+
+    var showForm = function (callback) {
+        var modalInstance = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modal-help.html',
+            controller: 'HelpModalCtrl',
+            size: 'lg',
+            scope: $scope,
+            resolve: {
+                helpForm: function () {
+                    return $scope.helpForm;
+                }
+            }
+        });
+
+        modalInstance.result.then(function (result) {
+            callback(result);
+        }, null);
     };
 
     var timer_persistent = null;
@@ -230,6 +249,13 @@ app.controller('ctrlClient', ['$scope','$routeParams', '$window', '$http', '$int
         }
         }
     })
+
+    $scope.showHelper = function() {
+        showForm(function(result){
+            if (result != undefined)
+            {}
+        });
+    }
 
     $scope.onStopPersistent = function(persistent) {
         bootbox.confirm("Are you sure you want to stop the persistent run?", function(result) {
