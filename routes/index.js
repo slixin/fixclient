@@ -384,7 +384,7 @@ router.post('/message/send', function(req, res) {
         res.status(400).send( {error: errors});
     } else {
         var client_id = req.body.id;
-        var message = req.body.message;
+        var message = req.body.message.indexOf(utils.SOHCHAR) > 0 ? req.body.message : JSON.parse(req.body.message);
         var storemsg = req.body.storemessage == undefined ? true : req.body.storemessage;
 
         if (global.clients.has(client_id)) {

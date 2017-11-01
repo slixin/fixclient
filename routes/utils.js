@@ -4,6 +4,8 @@ var path = require('path');
 
 var dictPath = require("path").join(__dirname, "dict");
 
+var SOHCHAR = exports.SOHCHAR = String.fromCharCode(1);
+
 var getDictionary = exports.getDictionary = function(dict_file_name, cb) {
     fs.readFile(dictPath+'/'+dict_file_name+'.json', 'utf8', function (err, data) {
         if (err) cb(err, null);
