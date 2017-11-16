@@ -1,13 +1,13 @@
 <div class="row page-header">
-        <div class="col-xs-8">
-            <span class="lead"><strong>{{client.id}}</strong></span>
-        </div>
-        <div class="col-xs-4 text-right">
-            <button class="btn btn-default" ng-click="onConnect(client)"  title="Connect" ng-disabled="client.isconnected == true"><i class="fa fa-toggle-on" aria-hidden="true"></i> Connect</button>
-            <button class="btn btn-default" ng-click="onDisconnect(client)" title="Disconnect" ng-disabled="client.isconnected == false"><i class="fa fa-toggle-off" aria-hidden="true"></i> Disconnect</button>
-            <button class="btn btn-danger" ng-click="onDelete(client)"  title="Delete" ng-disabled="client.isconnected == true"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-        </div>
+    <div class="col-xs-8">
+        <span class="lead"><strong>{{client.id}}</strong></span>
     </div>
+    <div class="col-xs-4 text-right">
+        <button class="btn btn-default" ng-click="onConnect(client)"  title="Connect" ng-disabled="client.isconnected == true"><i class="fa fa-toggle-on" aria-hidden="true"></i> Connect</button>
+        <button class="btn btn-default" ng-click="onDisconnect(client)" title="Disconnect" ng-disabled="client.isconnected == false"><i class="fa fa-toggle-off" aria-hidden="true"></i> Disconnect</button>
+        <button class="btn btn-danger" ng-click="onDelete(client)"  title="Delete" ng-disabled="client.isconnected == true"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+    </div>
+</div>
 <div class="page-body">
     <div class="row">
         <div class="col-md-2">

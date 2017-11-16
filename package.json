@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node  --max-old-space-size=2048 ./bin/www"
+    "start": "node  --max-old-space-size=4096 ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -13,7 +13,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "nodefix": "~1.2.7",
+    "nodefix": "~1.2.8",
     "dict": "~1.4.0",
     "express-validator": "~2.20.8",
     "redis":"~2.6.2",

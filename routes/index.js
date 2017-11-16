@@ -438,10 +438,16 @@ router.post('/message/', function(req, res) {
         res.status(400).send( {error: errors});
     } else {
         var client_id = req.body.id;
+        var direction = req.body.direction == undefined ? 0 : parseInt(req.body.direction);
         var max_count = req.body.max == undefined ? 1000 : parseInt(req.body.max);
+        var count_only = req.body.count_only == undefined ?  0 : parseInt(req.body.count_only);
         if (global.clients.has(client_id)) {
             var client = global.clients.get(client_id);
-            res.send(client.messages.slice(0, max_count));
+            var messages = client.messages.filter(function(o) { return o.direction == direction }).slice(0, max_count);
+            if (count_only == 0)
+                res.send(messages);
+            else
+                res.send(messages.length.toString());
         } else {
             res.status(400).send( {error: client_id+' is not there.'} );
         }
@@ -460,6 +466,7 @@ router.post('/message/search', function(req, res) {
         var direction = req.body.direction == undefined ? 0 : parseInt(req.body.direction);
         var where = JSON.parse(req.body.where);
         var max_count = req.body.max == undefined ? 1000 : parseInt(req.body.max);
+        var count_only = req.body.count_only == undefined ?  0 : parseInt(req.body.count_only);
         if (global.clients.has(client_id)) {
             var client = global.clients.get(client_id);
             var msgs = [];
@@ -468,10 +475,10 @@ router.post('/message/search', function(req, res) {
             var key_key = Object.keys(where_key)[0];
             var key_value = where_key[key_key];
 
-            var inbound_messages = client.messages.filter(function(o) { return o.direction == direction && o.json[key_key] == key_value });
+            var messages = client.messages.filter(function(o) { return o.direction == direction && o.json[key_key] == key_value });
 
-            for(var i=0; i < inbound_messages.length && i < max_count; i++) {
-                var msg = inbound_messages[i].json;
+            for(var i=0; i < messages.length && i < max_count; i++) {
+                var msg = messages[i].json;
                 var found = false;
                 for (var key in where_data) {
                     if (where_data.hasOwnProperty(key)) {
@@ -487,8 +494,10 @@ router.post('/message/search', function(req, res) {
                     msgs.push(msg);
                 }
             }
-
-            res.send(msgs);
+            if (count_only == 0)
+                res.send(msgs);
+            else
+                res.send(msgs.length.toString());
         } else {
             res.status(400).send( {error: client_id+' is not there.'} );
         }
