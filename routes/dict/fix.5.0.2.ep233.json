@@ -3,7 +3,7 @@
     "_type": "FIX",
     "_major": "5",
     "_minor": "0",
-    "_servicepack": "1",
+    "_servicepack": "2",
     "header": {
       "field": [
         {
@@ -603,9 +603,33 @@
             {
               "_name": "TrdRegTimestamps",
               "_required": "N"
+            },
+            {
+              "_name": "RateSource",
+              "_required": "N"
+            },
+            {
+              "_name": "TrdRegPublicationGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "TradePriceConditionGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderAttributeGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "RegulatoryTradeIDGrp",
+              "_required": "N"
             }
           ],
           "field": [
+            {
+              "_name": "TrdSubType",
+              "_required": "N"
+            },
             {
               "_name": "OrderID",
               "_required": "Y"
@@ -1201,6 +1225,10 @@
             {
               "_name": "PriceDelta",
               "_required": "N"
+            },
+            {
+              "_name": "AlgorithmicTradeIndicator",
+              "_required": "N"
             }
           ]
         },
@@ -1323,6 +1351,10 @@
             {
               "_name": "LinesOfTextGrp",
               "_required": "Y"
+            },
+            {
+              "_name": "NewsRefGrp",
+              "_required": "N"
             }
           ],
           "field": [
@@ -1356,6 +1388,26 @@
             },
             {
               "_name": "RawData",
+              "_required": "N"
+            },
+            {
+              "_name": "NewsID",
+              "_required": "N"
+            },
+            {
+              "_name": "NewsCategory",
+              "_required": "N"
+            },
+            {
+              "_name": "LanguageCode",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketID",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketSegmentID",
               "_required": "N"
             }
           ]
@@ -1802,6 +1854,10 @@
             },
             {
               "_name": "TrdRegTimestamps",
+              "_required": "N"
+            },
+            {
+              "_name": "TrdRegPublicationGrp",
               "_required": "N"
             }
           ]
@@ -2712,6 +2768,10 @@
             {
               "_name": "AllocGrp",
               "_required": "N"
+            },
+            {
+              "_name": "RateSource",
+              "_required": "N"
             }
           ]
         },
@@ -3057,6 +3117,14 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "BookingType",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderRestrictions",
+              "_required": "N"
             }
           ],
           "component": [
@@ -3294,6 +3362,18 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "BookingType",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderRestrictions",
+              "_required": "N"
+            },
+            {
+              "_name": "SettlCurrency",
+              "_required": "N"
             }
           ],
           "component": [
@@ -3335,6 +3415,10 @@
             },
             {
               "_name": "YieldData",
+              "_required": "N"
+            },
+            {
+              "_name": "RateSource",
               "_required": "N"
             }
           ]
@@ -3545,6 +3629,10 @@
             {
               "_name": "ApplQueueResolution",
               "_required": "N"
+            },
+            {
+              "_name": "MDStreamID",
+              "_required": "N"
             }
           ]
         },
@@ -3674,6 +3762,10 @@
             {
               "_name": "TradingSessionSubID",
               "_required": "N"
+            },
+            {
+              "_name": "QuoteType",
+              "_required": "N"
             }
           ],
           "component": [
@@ -3683,6 +3775,10 @@
             },
             {
               "_name": "QuotCxlEntriesGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -3728,7 +3824,7 @@
           "component": [
             {
               "_name": "Instrument",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "FinancingDetails",
@@ -3744,6 +3840,10 @@
             },
             {
               "_name": "Parties",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -3813,6 +3913,10 @@
             },
             {
               "_name": "QuotSetAckGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -3984,6 +4088,10 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
+              "_required": "N"
             }
           ]
         },
@@ -4112,7 +4220,7 @@
               "_required": "N"
             },
             {
-              "_name": "HaltReasonChar",
+              "_name": "HaltReasonInt",
               "_required": "N"
             },
             {
@@ -4754,6 +4862,10 @@
             {
               "_name": "UnderlyingInstrument",
               "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
+              "_required": "N"
             }
           ]
         },
@@ -4854,6 +4966,10 @@
             },
             {
               "_name": "UnderlyingInstrument",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -5545,6 +5661,18 @@
             {
               "_name": "SubscriptionRequestType",
               "_required": "N"
+            },
+            {
+              "_name": "SecurityListID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListType",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListTypeSource",
+              "_required": "N"
             }
           ],
           "component": [
@@ -5619,6 +5747,38 @@
             },
             {
               "_name": "LastFragment",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListRefID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListDesc",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedSecurityListDescLen",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedSecurityListDesc",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListType",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListTypeSource",
+              "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
               "_required": "N"
             }
           ]
@@ -5717,7 +5877,7 @@
             },
             {
               "_name": "SecurityResponseID",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "SecurityRequestResult",
@@ -5729,6 +5889,18 @@
             },
             {
               "_name": "LastFragment",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityReportID",
+              "_required": "N"
+            },
+            {
+              "_name": "ClearingBusinessDate",
+              "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
               "_required": "N"
             }
           ]
@@ -6634,10 +6806,6 @@
               "_required": "N"
             },
             {
-              "_name": "OrderQtyData",
-              "_required": "N"
-            },
-            {
               "_name": "YieldData",
               "_required": "N"
             },
@@ -6667,6 +6835,10 @@
             },
             {
               "_name": "TrdRepIndicatorsGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "TrdRegPublicationGrp",
               "_required": "N"
             }
           ],
@@ -6785,10 +6957,6 @@
             },
             {
               "_name": "ExecID",
-              "_required": "N"
-            },
-            {
-              "_name": "OrdStatus",
               "_required": "N"
             },
             {
@@ -6920,10 +7088,6 @@
               "_required": "N"
             },
             {
-              "_name": "OrderCategory",
-              "_required": "N"
-            },
-            {
               "_name": "Volatility",
               "_required": "N"
             },
@@ -6990,6 +7154,18 @@
             {
               "_name": "FeeMultiplier",
               "_required": "N"
+            },
+            {
+              "_name": "VenueType",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketSegmentID",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketID",
+              "_required": "N"
             }
           ]
         },
@@ -7038,6 +7214,10 @@
             },
             {
               "_name": "UnderlyingInstrument",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -7352,6 +7532,18 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "BookingType",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderCapacity",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderRestrictions",
+              "_required": "N"
             }
           ],
           "component": [
@@ -7361,7 +7553,7 @@
             },
             {
               "_name": "Instrument",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "FinancingDetails",
@@ -7393,6 +7585,10 @@
             },
             {
               "_name": "YieldData",
+              "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
               "_required": "N"
             }
           ]
@@ -7903,11 +8099,11 @@
             },
             {
               "_name": "UndInstrmtGrp",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "InstrmtLegGrp",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "YieldData",
@@ -8545,6 +8741,14 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "ModelType",
+              "_required": "N"
+            },
+            {
+              "_name": "PriceDelta",
+              "_required": "N"
             }
           ]
         },
@@ -8625,7 +8829,7 @@
           "component": [
             {
               "_name": "Instrument",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "UndInstrmtGrp",
@@ -8748,10 +8952,6 @@
             },
             {
               "_name": "SecondaryExecID",
-              "_required": "N"
-            },
-            {
-              "_name": "OrdStatus",
               "_required": "N"
             },
             {
@@ -8940,6 +9140,18 @@
             },
             {
               "_name": "FeeMultiplier",
+              "_required": "N"
+            },
+            {
+              "_name": "VenueType",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketSegmentID",
+              "_required": "N"
+            },
+            {
+              "_name": "MarketID",
               "_required": "N"
             }
           ],
@@ -9296,6 +9508,10 @@
             {
               "_name": "AllocGrp",
               "_required": "N"
+            },
+            {
+              "_name": "RateSource",
+              "_required": "N"
             }
           ]
         },
@@ -9310,7 +9526,7 @@
             },
             {
               "_name": "AllocID",
-              "_required": "Y"
+              "_required": "N"
             },
             {
               "_name": "ClearingBusinessDate",
@@ -9627,6 +9843,10 @@
             },
             {
               "_name": "EncodedText",
+              "_required": "N"
+            },
+            {
+              "_name": "PosReqID",
               "_required": "N"
             }
           ]
@@ -10406,7 +10626,7 @@
           "field": [
             {
               "_name": "CollInquiryID",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "SubscriptionRequestType",
@@ -11051,6 +11271,10 @@
             {
               "_name": "EncodedText",
               "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
+              "_required": "N"
             }
           ]
         },
@@ -11111,6 +11335,38 @@
             },
             {
               "_name": "LastFragment",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListRefID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListDesc",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedSecurityListDescLen",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedSecurityListDesc",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListType",
+              "_required": "N"
+            },
+            {
+              "_name": "SecurityListTypeSource",
+              "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
               "_required": "N"
             }
           ]
@@ -11711,6 +11967,10 @@
             {
               "_name": "LastFragment",
               "_required": "N"
+            },
+            {
+              "_name": "TransactTime",
+              "_required": "N"
             }
           ]
         },
@@ -11728,16 +11988,10 @@
               "_required": "Y"
             }
           ],
-          "field": [
-            {
-              "_name": "TradSesReqID",
-              "_required": "N"
-            },
-            {
-              "_name": "TradSesUpdateAction",
-              "_required": "N"
-            }
-          ]
+          "field": {
+            "_name": "TradSesReqID",
+            "_required": "N"
+          }
         },
         {
           "_name": "MarketDefinitionRequest",
@@ -11958,10 +12212,16 @@
               "_required": "N"
             }
           ],
-          "component": {
-            "_name": "ApplIDRequestGrp",
-            "_required": "N"
-          }
+          "component": [
+            {
+              "_name": "ApplIDRequestGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "Parties",
+              "_required": "N"
+            }
+          ]
         },
         {
           "_name": "ApplicationMessageRequestAck",
@@ -12001,10 +12261,16 @@
               "_required": "N"
             }
           ],
-          "component": {
-            "_name": "ApplIDRequestAckGrp",
-            "_required": "N"
-          }
+          "component": [
+            {
+              "_name": "ApplIDRequestAckGrp",
+              "_required": "N"
+            },
+            {
+              "_name": "Parties",
+              "_required": "N"
+            }
+          ]
         },
         {
           "_name": "ApplicationMessageReport",
@@ -12029,6 +12295,10 @@
             },
             {
               "_name": "EncodedText",
+              "_required": "N"
+            },
+            {
+              "_name": "ApplReqID",
               "_required": "N"
             }
           ],
@@ -12131,6 +12401,10 @@
             {
               "_name": "UnderlyingInstrument",
               "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
+              "_required": "N"
             }
           ]
         },
@@ -12204,6 +12478,10 @@
             {
               "_name": "UnderlyingInstrument",
               "_required": "N"
+            },
+            {
+              "_name": "TargetParties",
+              "_required": "N"
             }
           ]
         },
@@ -12233,11 +12511,164 @@
               "_required": "N"
             }
           ]
+        },
+        {
+          "_name": "StreamAssignmentRequest",
+          "_msgtype": "CC",
+          "_msgcat": "app",
+          "field": [
+            {
+              "_name": "StreamAsgnReqID",
+              "_required": "Y"
+            },
+            {
+              "_name": "StreamAsgnReqType",
+              "_required": "Y"
+            }
+          ],
+          "component": {
+            "_name": "StrmAsgnReqGrp",
+            "_required": "Y"
+          }
+        },
+        {
+          "_name": "StreamAssignmentReport",
+          "_msgtype": "CD",
+          "_msgcat": "app",
+          "field": [
+            {
+              "_name": "StreamAsgnRptID",
+              "_required": "Y"
+            },
+            {
+              "_name": "StreamAsgnReqType",
+              "_required": "N"
+            },
+            {
+              "_name": "StreamAsgnReqID",
+              "_required": "N"
+            }
+          ],
+          "component": {
+            "_name": "StrmAsgnRptGrp",
+            "_required": "N"
+          }
+        },
+        {
+          "_name": "StreamAssignmentReportACK",
+          "_msgtype": "CE",
+          "_msgcat": "app",
+          "field": [
+            {
+              "_name": "StreamAsgnAckType",
+              "_required": "Y"
+            },
+            {
+              "_name": "StreamAsgnRptID",
+              "_required": "Y"
+            },
+            {
+              "_name": "StreamAsgnRejReason",
+              "_required": "N"
+            },
+            {
+              "_name": "Text",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedTextLen",
+              "_required": "N"
+            },
+            {
+              "_name": "EncodedText",
+              "_required": "N"
+            }
+          ]
         }
       ]
     },
     "components": {
       "component": [
+        {
+          "_name": "RegulatoryTradeIDGrp",
+          "group": {
+            "_name": "NoRegulatoryTradeIDs",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "RegulatoryTradeID",
+                "_required": "N"
+              },
+              {
+                "_name": "RegulatoryTradeIDSource",
+                "_required": "N"
+              },
+              {
+                "_name": "RegulatoryTradeIDEvent",
+                "_required": "N"
+              },
+              {
+                "_name": "RegulatoryTradeIDType",
+                "_required": "N"
+              },
+              {
+                "_name": "RegulatoryLegRefID",
+                "_required": "N"
+              },
+              {
+                "_name": "RegulatoryTradeIDScope",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "OrderAttributeGrp",
+          "group": {
+            "_name": "NoOrderAttributes",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "OrderAttributeType",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderAttributeValue",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "TradePriceConditionGrp",
+          "group": {
+            "_name": "NoTradePriceConditions",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "TradePriceCondition",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "TrdRegPublicationGrp",
+          "group": {
+            "_name": "NoTrdRegPublications",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "TrdRegPublicationType",
+                "_required": "N"
+              },
+              {
+                "_name": "TrdRegPublicationReason",
+                "_required": "N"
+              }
+            ]
+          }
+        },
         {
           "_name": "CommissionData",
           "field": [
@@ -12505,7 +12936,7 @@
               "_required": "N"
             },
             {
-              "_name": "OptPayAmount",
+              "_name": "OptPayoutAmount",
               "_required": "N"
             },
             {
@@ -12513,7 +12944,7 @@
               "_required": "N"
             },
             {
-              "_name": "FuturesValuationMethod",
+              "_name": "ValuationMethod",
               "_required": "N"
             },
             {
@@ -12607,6 +13038,58 @@
             {
               "_name": "InterestAccrualDate",
               "_required": "N"
+            },
+            {
+              "_name": "ContractMultiplierUnit",
+              "_required": "N"
+            },
+            {
+              "_name": "FlowScheduleType",
+              "_required": "N"
+            },
+            {
+              "_name": "RestructuringType",
+              "_required": "N"
+            },
+            {
+              "_name": "Seniority",
+              "_required": "N"
+            },
+            {
+              "_name": "NotionalPercentageOutstanding",
+              "_required": "N"
+            },
+            {
+              "_name": "OriginalNotionalPercentageOutstanding",
+              "_required": "N"
+            },
+            {
+              "_name": "AttachmentPoint",
+              "_required": "N"
+            },
+            {
+              "_name": "DetachmentPoint",
+              "_required": "N"
+            },
+            {
+              "_name": "StrikePriceDeterminationMethod",
+              "_required": "N"
+            },
+            {
+              "_name": "StrikePriceBoundaryMethod",
+              "_required": "N"
+            },
+            {
+              "_name": "StrikePriceBoundaryPrecision",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingPriceDeterminationMethod",
+              "_required": "N"
+            },
+            {
+              "_name": "OptPayoutType",
+              "_required": "N"
             }
           ],
           "component": [
@@ -12624,6 +13107,10 @@
             },
             {
               "_name": "InstrumentParties",
+              "_required": "N"
+            },
+            {
+              "_name": "ComplexEvents",
               "_required": "N"
             }
           ]
@@ -12847,6 +13334,14 @@
             {
               "_name": "LegOptionRatio",
               "_required": "N"
+            },
+            {
+              "_name": "LegContractMultiplierUnit",
+              "_required": "N"
+            },
+            {
+              "_name": "LegFlowScheduleType",
+              "_required": "N"
             }
           ],
           "component": {
@@ -12962,6 +13457,10 @@
               },
               {
                 "_name": "PartyRole",
+                "_required": "N"
+              },
+              {
+                "_name": "PartyRoleQualifier",
                 "_required": "N"
               }
             ],
@@ -13456,6 +13955,38 @@
             },
             {
               "_name": "UnderlyingPutOrCall",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingContractMultiplierUnit",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingFlowScheduleType",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingRestructuringType",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingSeniority",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingNotionalPercentageOutstanding",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingOriginalNotionalPercentageOutstanding",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingAttachmentPoint",
+              "_required": "N"
+            },
+            {
+              "_name": "UnderlyingDetachmentPoint",
               "_required": "N"
             }
           ],
@@ -14389,6 +14920,10 @@
               {
                 "_name": "MDEntrySize",
                 "_required": "N"
+              },
+              {
+                "_name": "MDStreamID",
+                "_required": "N"
               }
             ]
           }
@@ -15128,7 +15663,7 @@
                 "_required": "N"
               },
               {
-                "_name": "HaltReasonChar",
+                "_name": "HaltReasonInt",
                 "_required": "N"
               },
               {
@@ -15278,6 +15813,22 @@
               {
                 "_name": "MDEntryForwardPoints",
                 "_required": "N"
+              },
+              {
+                "_name": "SettlCurrency",
+                "_required": "N"
+              },
+              {
+                "_name": "TrdType",
+                "_required": "N"
+              },
+              {
+                "_name": "FirstPx",
+                "_required": "N"
+              },
+              {
+                "_name": "LastPx",
+                "_required": "N"
               }
             ],
             "component": [
@@ -15295,6 +15846,10 @@
               },
               {
                 "_name": "Parties",
+                "_required": "N"
+              },
+              {
+                "_name": "RateSource",
                 "_required": "N"
               }
             ]
@@ -15395,7 +15950,7 @@
                 "_required": "N"
               },
               {
-                "_name": "HaltReasonChar",
+                "_name": "HaltReasonInt",
                 "_required": "N"
               },
               {
@@ -15569,6 +16124,22 @@
               {
                 "_name": "MDEntryForwardPoints",
                 "_required": "N"
+              },
+              {
+                "_name": "SettlCurrency",
+                "_required": "N"
+              },
+              {
+                "_name": "FirstPx",
+                "_required": "N"
+              },
+              {
+                "_name": "LastPx",
+                "_required": "N"
+              },
+              {
+                "_name": "MDStreamID",
+                "_required": "N"
               }
             ],
             "component": [
@@ -15602,6 +16173,10 @@
               },
               {
                 "_name": "Parties",
+                "_required": "N"
+              },
+              {
+                "_name": "RateSource",
                 "_required": "N"
               }
             ]
@@ -15991,6 +16566,18 @@
               {
                 "_name": "QuoteEntryRejectReason",
                 "_required": "N"
+              },
+              {
+                "_name": "BookingType",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderCapacity",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderRestrictions",
+                "_required": "N"
               }
             ],
             "component": [
@@ -16106,6 +16693,18 @@
               {
                 "_name": "Currency",
                 "_required": "N"
+              },
+              {
+                "_name": "BookingType",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderCapacity",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderRestrictions",
+                "_required": "N"
               }
             ],
             "component": [
@@ -16175,6 +16774,10 @@
               },
               {
                 "_name": "Parties",
+                "_required": "N"
+              },
+              {
+                "_name": "RateSource",
                 "_required": "N"
               }
             ],
@@ -16277,6 +16880,10 @@
               },
               {
                 "_name": "Price2",
+                "_required": "N"
+              },
+              {
+                "_name": "SettlCurrency",
                 "_required": "N"
               }
             ]
@@ -16505,6 +17112,10 @@
               {
                 "_name": "LastFragment",
                 "_required": "N"
+              },
+              {
+                "_name": "QuoteSetValidUntilTime",
+                "_required": "N"
               }
             ],
             "component": [
@@ -16596,6 +17207,10 @@
               },
               {
                 "_name": "EncodedText",
+                "_required": "N"
+              },
+              {
+                "_name": "RelSymTransactTime",
                 "_required": "N"
               }
             ]
@@ -16806,6 +17421,10 @@
               {
                 "_name": "EncodedText",
                 "_required": "N"
+              },
+              {
+                "_name": "RelSymTransactTime",
+                "_required": "N"
               }
             ]
           }
@@ -16830,6 +17449,10 @@
               },
               {
                 "_name": "CFICode",
+                "_required": "N"
+              },
+              {
+                "_name": "TransactTime",
                 "_required": "N"
               }
             ]
@@ -17216,31 +17839,7 @@
                 "_required": "Y"
               },
               {
-                "_name": "OrderID",
-                "_required": "N"
-              },
-              {
-                "_name": "SecondaryOrderID",
-                "_required": "N"
-              },
-              {
-                "_name": "ClOrdID",
-                "_required": "N"
-              },
-              {
-                "_name": "ExecRefID",
-                "_required": "N"
-              },
-              {
-                "_name": "SecondaryClOrdID",
-                "_required": "N"
-              },
-              {
-                "_name": "ListID",
-                "_required": "N"
-              },
-              {
-                "_name": "SideQty",
+                "_name": "SideLastQty",
                 "_required": "N"
               },
               {
@@ -17292,10 +17891,6 @@
                 "_required": "N"
               },
               {
-                "_name": "LotType",
-                "_required": "N"
-              },
-              {
                 "_name": "OddLot",
                 "_required": "N"
               },
@@ -17308,10 +17903,6 @@
                 "_required": "N"
               },
               {
-                "_name": "OrderInputDevice",
-                "_required": "N"
-              },
-              {
                 "_name": "ComplianceID",
                 "_required": "N"
               },
@@ -17320,27 +17911,7 @@
                 "_required": "N"
               },
               {
-                "_name": "OrderCapacity",
-                "_required": "N"
-              },
-              {
-                "_name": "OrderRestrictions",
-                "_required": "N"
-              },
-              {
                 "_name": "CustOrderCapacity",
-                "_required": "N"
-              },
-              {
-                "_name": "OrdType",
-                "_required": "N"
-              },
-              {
-                "_name": "ExecInst",
-                "_required": "N"
-              },
-              {
-                "_name": "TransBkdTime",
                 "_required": "N"
               },
               {
@@ -17458,6 +18029,26 @@
               {
                 "_name": "ExchangeSpecialInstructions",
                 "_required": "N"
+              },
+              {
+                "_name": "OrderCategory",
+                "_required": "N"
+              },
+              {
+                "_name": "SideExecID",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderDelay",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderDelayUnit",
+                "_required": "N"
+              },
+              {
+                "_name": "SideLiquidityInd",
+                "_required": "N"
               }
             ],
             "component": [
@@ -17495,6 +18086,10 @@
               },
               {
                 "_name": "SettlDetails",
+                "_required": "N"
+              },
+              {
+                "_name": "TradeReportOrderDetail",
                 "_required": "N"
               }
             ]
@@ -17954,6 +18549,10 @@
               {
                 "_name": "EncodedText",
                 "_required": "N"
+              },
+              {
+                "_name": "RelSymTransactTime",
+                "_required": "N"
               }
             ],
             "component": [
@@ -18147,26 +18746,6 @@
                 "_required": "Y"
               },
               {
-                "_name": "OrderID",
-                "_required": "N"
-              },
-              {
-                "_name": "SecondaryOrderID",
-                "_required": "N"
-              },
-              {
-                "_name": "ClOrdID",
-                "_required": "N"
-              },
-              {
-                "_name": "SecondaryClOrdID",
-                "_required": "N"
-              },
-              {
-                "_name": "ListID",
-                "_required": "N"
-              },
-              {
                 "_name": "Account",
                 "_required": "N"
               },
@@ -18187,19 +18766,11 @@
                 "_required": "N"
               },
               {
-                "_name": "LotType",
-                "_required": "N"
-              },
-              {
                 "_name": "TradeInputSource",
                 "_required": "N"
               },
               {
                 "_name": "TradeInputDevice",
-                "_required": "N"
-              },
-              {
-                "_name": "OrderInputDevice",
                 "_required": "N"
               },
               {
@@ -18211,27 +18782,7 @@
                 "_required": "N"
               },
               {
-                "_name": "OrderCapacity",
-                "_required": "N"
-              },
-              {
-                "_name": "OrderRestrictions",
-                "_required": "N"
-              },
-              {
                 "_name": "CustOrderCapacity",
-                "_required": "N"
-              },
-              {
-                "_name": "OrdType",
-                "_required": "N"
-              },
-              {
-                "_name": "ExecInst",
-                "_required": "N"
-              },
-              {
-                "_name": "TransBkdTime",
                 "_required": "N"
               },
               {
@@ -18347,7 +18898,7 @@
                 "_required": "N"
               },
               {
-                "_name": "SideQty",
+                "_name": "SideLastQty",
                 "_required": "N"
               },
               {
@@ -18368,6 +18919,22 @@
               },
               {
                 "_name": "SideTrdSubTyp",
+                "_required": "N"
+              },
+              {
+                "_name": "SideExecID",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderDelay",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderDelayUnit",
+                "_required": "N"
+              },
+              {
+                "_name": "OrderCategory",
                 "_required": "N"
               }
             ],
@@ -18407,6 +18974,10 @@
               {
                 "_name": "SideTrdRegTS",
                 "_required": "N"
+              },
+              {
+                "_name": "TradeReportOrderDetail",
+                "_required": "N"
               }
             ]
           }
@@ -18418,15 +18989,15 @@
             "_required": "N",
             "field": [
               {
-                "_name": "UndlyInstrumentPartyID",
+                "_name": "UnderlyingInstrumentPartyID",
                 "_required": "N"
               },
               {
-                "_name": "UndlyInstrumentPartyIDSource",
+                "_name": "UnderlyingInstrumentPartyIDSource",
                 "_required": "N"
               },
               {
-                "_name": "UndlyInstrumentPartyRole",
+                "_name": "UnderlyingInstrumentPartyRole",
                 "_required": "N"
               }
             ],
@@ -18443,11 +19014,11 @@
             "_required": "N",
             "field": [
               {
-                "_name": "UndlyInstrumentPartySubID",
+                "_name": "UnderlyingInstrumentPartySubID",
                 "_required": "N"
               },
               {
-                "_name": "UndlyInstrumentPartySubIDType",
+                "_name": "UnderlyingInstrumentPartySubIDType",
                 "_required": "N"
               }
             ]
@@ -18681,6 +19252,14 @@
               },
               {
                 "_name": "EncodedText",
+                "_required": "N"
+              },
+              {
+                "_name": "TransactTime",
+                "_required": "N"
+              },
+              {
+                "_name": "TradSesUpdateAction",
                 "_required": "N"
               }
             ],
@@ -19452,7 +20031,7 @@
               "_required": "N"
             },
             {
-              "_name": "DerivativeFuturesValuationMethod",
+              "_name": "DerivativeValuationMethod",
               "_required": "N"
             },
             {
@@ -19521,6 +20100,14 @@
             },
             {
               "_name": "DerivativeContractSettlMonth",
+              "_required": "N"
+            },
+            {
+              "_name": "DerivativeContractMultiplierUnit",
+              "_required": "N"
+            },
+            {
+              "_name": "DerivativeFlowScheduleType",
               "_required": "N"
             }
           ],
@@ -19634,6 +20221,10 @@
               },
               {
                 "_name": "EncodedText",
+                "_required": "N"
+              },
+              {
+                "_name": "RelSymTransactTime",
                 "_required": "N"
               }
             ],
@@ -19816,6 +20407,10 @@
               {
                 "_name": "FillQty",
                 "_required": "N"
+              },
+              {
+                "_name": "FillLiquidityInd",
+                "_required": "N"
               }
             ],
             "component": {
@@ -19879,8 +20474,16 @@
               {
                 "_name": "ApplEndSeqNum",
                 "_required": "N"
+              },
+              {
+                "_name": "RefApplReqID",
+                "_required": "N"
               }
-            ]
+            ],
+            "component": {
+              "_name": "NestedParties",
+              "_required": "N"
+            }
           }
         },
         {
@@ -19908,8 +20511,16 @@
               {
                 "_name": "ApplResponseError",
                 "_required": "N"
+              },
+              {
+                "_name": "RefApplReqID",
+                "_required": "N"
               }
-            ]
+            ],
+            "component": {
+              "_name": "NestedParties",
+              "_required": "N"
+            }
           }
         },
         {
@@ -19973,6 +20584,359 @@
               "_name": "NstdPtys4SubGrp",
               "_required": "N"
             }
+          }
+        },
+        {
+          "_name": "TradeReportOrderDetail",
+          "field": [
+            {
+              "_name": "OrderID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecondaryOrderID",
+              "_required": "N"
+            },
+            {
+              "_name": "ClOrdID",
+              "_required": "N"
+            },
+            {
+              "_name": "SecondaryClOrdID",
+              "_required": "N"
+            },
+            {
+              "_name": "ListID",
+              "_required": "N"
+            },
+            {
+              "_name": "RefOrderID",
+              "_required": "N"
+            },
+            {
+              "_name": "RefOrderIDSource",
+              "_required": "N"
+            },
+            {
+              "_name": "RefOrdIDReason",
+              "_required": "N"
+            },
+            {
+              "_name": "OrdType",
+              "_required": "N"
+            },
+            {
+              "_name": "Price",
+              "_required": "N"
+            },
+            {
+              "_name": "StopPx",
+              "_required": "N"
+            },
+            {
+              "_name": "ExecInst",
+              "_required": "N"
+            },
+            {
+              "_name": "OrdStatus",
+              "_required": "N"
+            },
+            {
+              "_name": "LeavesQty",
+              "_required": "N"
+            },
+            {
+              "_name": "CumQty",
+              "_required": "N"
+            },
+            {
+              "_name": "TimeInForce",
+              "_required": "N"
+            },
+            {
+              "_name": "ExpireTime",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderCapacity",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderRestrictions",
+              "_required": "N"
+            },
+            {
+              "_name": "OrigCustOrderCapacity",
+              "_required": "N"
+            },
+            {
+              "_name": "OrderInputDevice",
+              "_required": "N"
+            },
+            {
+              "_name": "LotType",
+              "_required": "N"
+            },
+            {
+              "_name": "TransBkdTime",
+              "_required": "N"
+            },
+            {
+              "_name": "OrigOrdModTime",
+              "_required": "N"
+            },
+            {
+              "_name": "BookingType",
+              "_required": "N"
+            }
+          ],
+          "component": [
+            {
+              "_name": "OrderQtyData",
+              "_required": "N"
+            },
+            {
+              "_name": "DisplayInstruction",
+              "_required": "N"
+            }
+          ]
+        },
+        {
+          "_name": "RateSource",
+          "group": {
+            "_name": "NoRateSources",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "RateSource",
+                "_required": "N"
+              },
+              {
+                "_name": "RateSourceType",
+                "_required": "N"
+              },
+              {
+                "_name": "ReferencePage",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "TargetParties",
+          "group": {
+            "_name": "NoTargetPartyIDs",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "TargetPartyID",
+                "_required": "N"
+              },
+              {
+                "_name": "TargetPartyIDSource",
+                "_required": "N"
+              },
+              {
+                "_name": "TargetPartyRole",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "NewsRefGrp",
+          "group": {
+            "_name": "NoNewsRefIDs",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "NewsRefID",
+                "_required": "N"
+              },
+              {
+                "_name": "NewsRefType",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "ComplexEvents",
+          "group": {
+            "_name": "NoComplexEvents",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "ComplexEventType",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexOptPayoutAmount",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventPrice",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventPriceBoundaryMethod",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventPriceBoundaryPrecision",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventPriceTimeType",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventCondition",
+                "_required": "N"
+              }
+            ],
+            "component": {
+              "_name": "ComplexEventDates",
+              "_required": "N"
+            }
+          }
+        },
+        {
+          "_name": "ComplexEventDates",
+          "group": {
+            "_name": "NoComplexEventDates",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "ComplexEventStartDate",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventEndDate",
+                "_required": "N"
+              }
+            ],
+            "component": {
+              "_name": "ComplexEventTimes",
+              "_required": "N"
+            }
+          }
+        },
+        {
+          "_name": "ComplexEventTimes",
+          "group": {
+            "_name": "NoComplexEventTimes",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "ComplexEventStartTime",
+                "_required": "N"
+              },
+              {
+                "_name": "ComplexEventEndTime",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "StrmAsgnReqGrp",
+          "group": {
+            "_name": "NoAsgnReqs",
+            "_required": "N",
+            "component": [
+              {
+                "_name": "Parties",
+                "_required": "N"
+              },
+              {
+                "_name": "StrmAsgnReqInstrmtGrp",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "StrmAsgnRptGrp",
+          "group": {
+            "_name": "NoAsgnReqs",
+            "_required": "N",
+            "component": [
+              {
+                "_name": "Parties",
+                "_required": "N"
+              },
+              {
+                "_name": "StrmAsgnRptInstrmtGrp",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "StrmAsgnReqInstrmtGrp",
+          "group": {
+            "_name": "NoRelatedSym",
+            "_required": "N",
+            "component": {
+              "_name": "Instrument",
+              "_required": "N"
+            },
+            "field": [
+              {
+                "_name": "SettlType",
+                "_required": "N"
+              },
+              {
+                "_name": "MDEntrySize",
+                "_required": "N"
+              },
+              {
+                "_name": "MDStreamID",
+                "_required": "N"
+              }
+            ]
+          }
+        },
+        {
+          "_name": "StrmAsgnRptInstrmtGrp",
+          "group": {
+            "_name": "NoRelatedSym",
+            "_required": "N",
+            "component": {
+              "_name": "Instrument",
+              "_required": "N"
+            },
+            "field": [
+              {
+                "_name": "SettlType",
+                "_required": "N"
+              },
+              {
+                "_name": "StreamAsgnType",
+                "_required": "N"
+              },
+              {
+                "_name": "MDStreamID",
+                "_required": "N"
+              },
+              {
+                "_name": "StreamAsgnRejReason",
+                "_required": "N"
+              },
+              {
+                "_name": "Text",
+                "_required": "N"
+              },
+              {
+                "_name": "EncodedTextLen",
+                "_required": "N"
+              },
+              {
+                "_name": "EncodedText",
+                "_required": "N"
+              }
+            ]
           }
         }
       ]
@@ -20865,6 +21829,18 @@
               "_description": "USERNOTIFICATION"
             },
             {
+              "_enum": "CC",
+              "_description": "STREAMASSIGNMENTREQUEST"
+            },
+            {
+              "_enum": "CD",
+              "_description": "STREAMASSIGNMENTREPORT"
+            },
+            {
+              "_enum": "CE",
+              "_description": "STREAMASSIGNMENTREPORTACK"
+            },
+            {
               "_enum": "D",
               "_description": "NEWORDERSINGLE"
             },
@@ -21338,7 +22314,7 @@
             },
             {
               "_enum": "A",
-              "_description": "CROSS_SHORT_EXXMPT"
+              "_description": "CROSS_SHORT_EXEMPT"
             },
             {
               "_enum": "B",
@@ -21792,7 +22768,7 @@
             },
             {
               "_enum": "7",
-              "_description": "OTHER"
+              "_description": "OTHER_7"
             },
             {
               "_enum": "8",
@@ -21817,6 +22793,10 @@
             {
               "_enum": "13",
               "_description": "WAREHOUSE_REQUEST_REJECTED"
+            },
+            {
+              "_enum": "99",
+              "_description": "OTHER_99"
             }
           ]
         },
@@ -22126,7 +23106,7 @@
             },
             {
               "_enum": "W",
-              "_description": "INDIDCATION"
+              "_description": "INDICATION"
             },
             {
               "_enum": "X",
@@ -23190,6 +24170,22 @@
             {
               "_enum": "CASH",
               "_description": "CASH"
+            },
+            {
+              "_enum": "FXNDF",
+              "_description": "NON_DELIVERABLE_FORWARD"
+            },
+            {
+              "_enum": "FXSPOT",
+              "_description": "FX_SPOT"
+            },
+            {
+              "_enum": "FXFWD",
+              "_description": "FX_FORWARD"
+            },
+            {
+              "_enum": "FXSWAP",
+              "_description": "FX_SWAP"
             }
           ]
         },
@@ -24397,6 +25393,26 @@
             {
               "_enum": "V",
               "_description": "CUMULATIVE_VALUE_ADJUSTMENT_FOR_SHORT_POSITIONS"
+            },
+            {
+              "_enum": "Y",
+              "_description": "RECOVERY_RATE"
+            },
+            {
+              "_enum": "Z",
+              "_description": "RECOVERY_RATE_FOR_LONG"
+            },
+            {
+              "_enum": "a",
+              "_description": "RECOVERY_RATE_FOR_SHORT"
+            },
+            {
+              "_enum": "W",
+              "_description": "FIXING_PRICE"
+            },
+            {
+              "_enum": "X",
+              "_description": "CASH_RATE"
             }
           ]
         },
@@ -24684,6 +25700,14 @@
             {
               "_enum": "5",
               "_description": "MEDIAN_PRICE"
+            },
+            {
+              "_enum": "6",
+              "_description": "FULL_CURVE"
+            },
+            {
+              "_enum": "7",
+              "_description": "FLAT_CURVE"
             }
           ]
         },
@@ -25423,7 +26447,7 @@
           "value": [
             {
               "_enum": "1",
-              "_description": "CANCEL_FOR_SYMBOL"
+              "_description": "CANCEL_FOR_ONE_OR_MORE_SECURITIES"
             },
             {
               "_enum": "2",
@@ -25431,7 +26455,7 @@
             },
             {
               "_enum": "3",
-              "_description": "CANCEL_FOR_UNDERLYING_SYMBOL"
+              "_description": "CANCEL_FOR_UNDERLYING_SECURITY"
             },
             {
               "_enum": "4",
@@ -25440,6 +26464,18 @@
             {
               "_enum": "5",
               "_description": "CANCEL_QUOTE_SPECIFIED_IN_QUOTEID"
+            },
+            {
+              "_enum": "6",
+              "_description": "CANCEL_BY_QUOTETYPE"
+            },
+            {
+              "_enum": "7",
+              "_description": "CANCEL_FOR_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "8",
+              "_description": "CANCEL_FOR_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -25500,6 +26536,14 @@
             {
               "_enum": "99",
               "_description": "OTHER"
+            },
+            {
+              "_enum": "12",
+              "_description": "INVALID_OR_UNKNOWN_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "13",
+              "_description": "INVALID_OR_UNKNOWN_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -25518,7 +26562,7 @@
             },
             {
               "_enum": "2",
-              "_description": "ACKNOWLEDGE_EACH_QUOTE_MESSAGES"
+              "_description": "ACKNOWLEDGE_EACH_QUOTE_MESSAGE"
             },
             {
               "_enum": "3",
@@ -25824,36 +26868,40 @@
             {
               "_enum": "25",
               "_description": "CROSS"
+            },
+            {
+              "_enum": "26",
+              "_description": "POST_CLOSE"
             }
           ]
         },
         {
           "_number": "327",
-          "_name": "HaltReasonChar",
-          "_type": "CHAR",
+          "_name": "HaltReasonInt",
+          "_type": "INT",
           "value": [
             {
-              "_enum": "D",
+              "_enum": "0",
               "_description": "NEWS_DISSEMINATION"
             },
             {
-              "_enum": "E",
+              "_enum": "1",
               "_description": "ORDER_INFLUX"
             },
             {
-              "_enum": "I",
+              "_enum": "2",
               "_description": "ORDER_IMBALANCE"
             },
             {
-              "_enum": "M",
+              "_enum": "3",
               "_description": "ADDITIONAL_INFORMATION"
             },
             {
-              "_enum": "P",
-              "_description": "NEW_PENDING"
+              "_enum": "4",
+              "_description": "NEWS_PENDING"
             },
             {
-              "_enum": "X",
+              "_enum": "5",
               "_description": "EQUIPMENT_CHANGEOVER"
             }
           ]
@@ -26406,7 +27454,7 @@
             },
             {
               "_enum": "3",
-              "_description": "UNKNOWN_MESSAGE_TYPE"
+              "_description": "UNSUPPORTED_MESSAGE_TYPE"
             },
             {
               "_enum": "4",
@@ -27128,7 +28176,7 @@
             },
             {
               "_enum": "2",
-              "_description": "INDIVIDUAL_LEG_OF_A_MULTILEG_SECURITY"
+              "_description": "INDIVIDUAL_LEG_OF_A_MULTI_LEG_SECURITY"
             },
             {
               "_enum": "3",
@@ -27428,7 +28476,7 @@
             },
             {
               "_enum": "46",
-              "_description": "FORIEGN_FIRM"
+              "_description": "FOREIGN_FIRM"
             },
             {
               "_enum": "47",
@@ -27569,6 +28617,22 @@
             {
               "_enum": "81",
               "_description": "BROKERCLEARINGID"
+            },
+            {
+              "_enum": "82",
+              "_description": "CENTRAL_REGISTRATION_DEPOSITORY"
+            },
+            {
+              "_enum": "83",
+              "_description": "CLEARING_ACCOUNT"
+            },
+            {
+              "_enum": "84",
+              "_description": "ACCEPTABLE_SETTLING_COUNTERPARTY"
+            },
+            {
+              "_enum": "85",
+              "_description": "UNACCEPTABLE_SETTLING_COUNTERPARTY"
             }
           ]
         },
@@ -28666,7 +29730,7 @@
             },
             {
               "_enum": "6",
-              "_description": "ACTING_AS_MARKET_MAKER_OF_SPECIALIST_IN_THE_UNDERLYING_SECURITY_OF_A_DERIVATIVE_SEUCIRTY"
+              "_description": "ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_UNDERLYING_SECURITY_OF_A_DERIVATIVE_SECURITY"
             },
             {
               "_enum": "7",
@@ -28678,7 +29742,7 @@
             },
             {
               "_enum": "9",
-              "_description": "EXTNERAL_INTER_CONNECTED_MARKET_LINKAGE"
+              "_description": "EXTERNAL_INTER_CONNECTED_MARKET_LINKAGE"
             },
             {
               "_enum": "A",
@@ -28699,6 +29763,10 @@
             {
               "_enum": "E",
               "_description": "ALGORITHMIC"
+            },
+            {
+              "_enum": "F",
+              "_description": "CROSS"
             }
           ]
         },
@@ -28746,6 +29814,14 @@
             {
               "_enum": "A",
               "_description": "CANCEL_ORDERS_FOR_A_SECURITY_GROUP"
+            },
+            {
+              "_enum": "B",
+              "_description": "CANCEL_FOR_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "C",
+              "_description": "CANCEL_FOR_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -28797,6 +29873,14 @@
             {
               "_enum": "A",
               "_description": "CANCEL_ORDERS_FOR_A_SECURITY_GROUP"
+            },
+            {
+              "_enum": "B",
+              "_description": "CANCEL_ORDERS_FOR_A_SECURITIES_ISSUER"
+            },
+            {
+              "_enum": "C",
+              "_description": "CANCEL_ORDERS_FOR_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -28848,6 +29932,14 @@
             {
               "_enum": "99",
               "_description": "OTHER"
+            },
+            {
+              "_enum": "10",
+              "_description": "INVALID_OR_UNKNOWN_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "11",
+              "_description": "INVALID_OR_UNKNOWN_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -29268,7 +30360,7 @@
             },
             {
               "_enum": "1",
-              "_description": "UNCOMPARED_UNMATCHED_OR_UNAFFIRED"
+              "_description": "UNCOMPARED_UNMATCHED_OR_UNAFFIRMED"
             },
             {
               "_enum": "2",
@@ -29589,6 +30681,14 @@
             {
               "_enum": "8",
               "_description": "STATUS_FOR_ORDERS_FOR_A_PARTYID"
+            },
+            {
+              "_enum": "9",
+              "_description": "STATUS_FOR_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "10",
+              "_description": "STATUS_FOR_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -30702,6 +31802,18 @@
             {
               "_enum": "PNTN",
               "_description": "PRIVATELY_NEGOTIATED_TRADE_QTY"
+            },
+            {
+              "_enum": "DLT",
+              "_description": "NET_DELTA_QTY"
+            },
+            {
+              "_enum": "CEA",
+              "_description": "CREDIT_EVENT_ADJUSTMENT"
+            },
+            {
+              "_enum": "SEA",
+              "_description": "SUCCESSION_EVENT_ADJUSTMENT"
             }
           ]
         },
@@ -30774,6 +31886,42 @@
             {
               "_enum": "SETL",
               "_description": "SETTLEMENT_VALUE"
+            },
+            {
+              "_enum": "ICPN",
+              "_description": "INITIAL_TRADE_COUPON_AMOUNT"
+            },
+            {
+              "_enum": "ACPN",
+              "_description": "ACCRUED_COUPON_AMOUNT"
+            },
+            {
+              "_enum": "CPN",
+              "_description": "COUPON_AMOUNT"
+            },
+            {
+              "_enum": "IACPN",
+              "_description": "INCREMENTAL_ACCRUED_COUPON"
+            },
+            {
+              "_enum": "CMTM",
+              "_description": "COLLATERALIZED_MARK_TO_MARKET"
+            },
+            {
+              "_enum": "ICMTM",
+              "_description": "INCREMENTAL_COLLATERALIZED_MARK_TO_MARKET"
+            },
+            {
+              "_enum": "DLV",
+              "_description": "COMPENSATION_AMOUNT"
+            },
+            {
+              "_enum": "BANK",
+              "_description": "TOTAL_BANKED_AMOUNT"
+            },
+            {
+              "_enum": "COLAT",
+              "_description": "TOTAL_COLLATERALIZED_AMOUNT"
             }
           ]
         },
@@ -31001,6 +32149,10 @@
             {
               "_enum": "5",
               "_description": "BACKOUT_MESSAGE"
+            },
+            {
+              "_enum": "6",
+              "_description": "DELTA_POSITIONS"
             }
           ]
         },
@@ -31429,6 +32581,10 @@
             {
               "_enum": "6",
               "_description": "DESK_RECEIPT"
+            },
+            {
+              "_enum": "7",
+              "_description": "SUBMISSION_TO_CLEARING"
             }
           ]
         },
@@ -32421,7 +33577,7 @@
             },
             {
               "_enum": "6",
-              "_description": "ONSET_DUT_TO_AN_ALLOCATION"
+              "_description": "ONSET_DUE_TO_AN_ALLOCATION"
             },
             {
               "_enum": "7",
@@ -34212,11 +35368,11 @@
             },
             {
               "_enum": "21",
-              "_description": "LOCALMKTTIME"
+              "_description": "LOCALMKTDATE"
             },
             {
               "_enum": "22",
-              "_description": "UTCDATE"
+              "_description": "UTCDATEONLY"
             },
             {
               "_enum": "23",
@@ -34225,6 +35381,26 @@
             {
               "_enum": "24",
               "_description": "MULTIPLESTRINGVALUE"
+            },
+            {
+              "_enum": "25",
+              "_description": "COUNTRY"
+            },
+            {
+              "_enum": "26",
+              "_description": "LANGUAGE"
+            },
+            {
+              "_enum": "27",
+              "_description": "TZTIMEONLY"
+            },
+            {
+              "_enum": "28",
+              "_description": "TZTIMESTAMP"
+            },
+            {
+              "_enum": "29",
+              "_description": "TENOR"
             }
           ]
         },
@@ -34535,6 +35711,10 @@
             {
               "_enum": "USD",
               "_description": "US_DOLLARS"
+            },
+            {
+              "_enum": "Alw",
+              "_description": "ALLOWANCES"
             }
           ]
         },
@@ -34639,7 +35819,7 @@
         },
         {
           "_number": "1009",
-          "_name": "SideQty",
+          "_name": "SideLastQty",
           "_type": "INT"
         },
         {
@@ -35170,7 +36350,21 @@
         {
           "_number": "1048",
           "_name": "DealingCapacity",
-          "_type": "PRICEOFFSET"
+          "_type": "CHAR",
+          "value": [
+            {
+              "_enum": "A",
+              "_description": "AGENT"
+            },
+            {
+              "_enum": "P",
+              "_description": "PRINCIPAL"
+            },
+            {
+              "_enum": "R",
+              "_description": "RISKLESS_PRINCIPAL"
+            }
+          ]
         },
         {
           "_number": "1049",
@@ -35178,12 +36372,12 @@
           "_type": "CHAR",
           "value": [
             {
-              "_enum": "R",
-              "_description": "RANDOM"
+              "_enum": "P",
+              "_description": "PRO_RATA"
             },
             {
-              "_enum": "P",
-              "_description": "PRORATA"
+              "_enum": "R",
+              "_description": "RANDOM"
             }
           ]
         },
@@ -35244,17 +36438,17 @@
         },
         {
           "_number": "1059",
-          "_name": "UndlyInstrumentPartyID",
+          "_name": "UnderlyingInstrumentPartyID",
           "_type": "STRING"
         },
         {
           "_number": "1060",
-          "_name": "UndlyInstrumentPartyIDSource",
+          "_name": "UnderlyingInstrumentPartyIDSource",
           "_type": "CHAR"
         },
         {
           "_number": "1061",
-          "_name": "UndlyInstrumentPartyRole",
+          "_name": "UnderlyingInstrumentPartyRole",
           "_type": "INT"
         },
         {
@@ -35264,12 +36458,12 @@
         },
         {
           "_number": "1063",
-          "_name": "UndlyInstrumentPartySubID",
+          "_name": "UnderlyingInstrumentPartySubID",
           "_type": "STRING"
         },
         {
           "_number": "1064",
-          "_name": "UndlyInstrumentPartySubIDType",
+          "_name": "UnderlyingInstrumentPartySubIDType",
           "_type": "INT"
         },
         {
@@ -35379,6 +36573,10 @@
             {
               "_enum": "3",
               "_description": "QUOTEENTRYID"
+            },
+            {
+              "_enum": "4",
+              "_description": "ORIGINAL_ORDER_ID"
             }
           ]
         },
@@ -35418,6 +36616,10 @@
             {
               "_enum": "3",
               "_description": "RANDOM"
+            },
+            {
+              "_enum": "4",
+              "_description": "UNDISCLOSED"
             }
           ]
         },
@@ -35495,6 +36697,10 @@
             {
               "_enum": "3",
               "_description": "BLOCK_LOT"
+            },
+            {
+              "_enum": "4",
+              "_description": "ROUND_LOT_BASED_UPON_UNITOFMEASURE"
             }
           ]
         },
@@ -35902,6 +37108,10 @@
             {
               "_enum": "8",
               "_description": "FIX50SP1"
+            },
+            {
+              "_enum": "9",
+              "_description": "FIX50SP2"
             }
           ]
         },
@@ -36305,7 +37515,7 @@
             },
             {
               "_enum": "6",
-              "_description": "CHANGE_OF_SECURITY_STATUS"
+              "_description": "CHANGE_OF_SECURITY_TRADING_STATUS"
             },
             {
               "_enum": "7",
@@ -36465,7 +37675,7 @@
         },
         {
           "_number": "1195",
-          "_name": "OptPayAmount",
+          "_name": "OptPayoutAmount",
           "_type": "AMT"
         },
         {
@@ -36484,12 +37694,16 @@
             {
               "_enum": "INT",
               "_description": "INTEREST_RATE_INDEX"
+            },
+            {
+              "_enum": "PCTPAR",
+              "_description": "PERCENT_OF_PAR"
             }
           ]
         },
         {
           "_number": "1197",
-          "_name": "FuturesValuationMethod",
+          "_name": "ValuationMethod",
           "_type": "STRING",
           "value": [
             {
@@ -36503,6 +37717,14 @@
             {
               "_enum": "FUTDA",
               "_description": "FUTURES_STYLE_WITH_AN_ATTACHED_CASH_ADJUSTMENT"
+            },
+            {
+              "_enum": "CDS",
+              "_description": "CDS_STYLE_COLLATERALIZATION_OF_MARKET_TO_MARKET_AND_COUPON"
+            },
+            {
+              "_enum": "CDSD",
+              "_description": "CDS_IN_DELIVERY"
             }
           ]
         },
@@ -37176,7 +38398,7 @@
         },
         {
           "_number": "1319",
-          "_name": "DerivativeFuturesValuationMethod",
+          "_name": "DerivativeValuationMethod",
           "_type": "STRING"
         },
         {
@@ -37338,6 +38560,14 @@
             {
               "_enum": "4",
               "_description": "UNSUBSCRIBE_TO_THE_SPECIFIED_APPLICATIONS"
+            },
+            {
+              "_enum": "5",
+              "_description": "CANCEL_RETRANSMISSION"
+            },
+            {
+              "_enum": "6",
+              "_description": "CANCEL_RETRANSMISSION_AND_UNSUBSCRIBE_TO_THE_SPECIFIED_APPLICATIONS"
             }
           ]
         },
@@ -37565,6 +38795,14 @@
             {
               "_enum": "10",
               "_description": "ALL_ORDERS_FOR_A_SECURITY_GROUP"
+            },
+            {
+              "_enum": "11",
+              "_description": "CANCEL_FOR_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "12",
+              "_description": "CANCEL_FOR_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -37631,6 +38869,14 @@
             {
               "_enum": "99",
               "_description": "OTHER"
+            },
+            {
+              "_enum": "10",
+              "_description": "INVALID_OR_UNKNOWN_SECURITY_ISSUER"
+            },
+            {
+              "_enum": "11",
+              "_description": "INVALID_OR_UNKNOWN_ISSUER_OF_UNDERLYING_SECURITY"
             }
           ]
         },
@@ -38049,6 +39295,1350 @@
             {
               "_enum": "2",
               "_description": "HEARTBEAT_MESSAGE_INDICATING_THAT_APPLICATION_IDENTIFIED_BY_REFAPPLID"
+            },
+            {
+              "_enum": "3",
+              "_description": "APPLICATION_MESSAGE_RE_SEND_COMPLETED"
+            }
+          ]
+        },
+        {
+          "_number": "1427",
+          "_name": "SideExecID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1428",
+          "_name": "OrderDelay",
+          "_type": "INT"
+        },
+        {
+          "_number": "1429",
+          "_name": "OrderDelayUnit",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "SECONDS"
+            },
+            {
+              "_enum": "1",
+              "_description": "TENTHS_OF_A_SECOND"
+            },
+            {
+              "_enum": "2",
+              "_description": "HUNDREDTHS_OF_A_SECOND"
+            },
+            {
+              "_enum": "3",
+              "_description": "MILLISECONDS"
+            },
+            {
+              "_enum": "4",
+              "_description": "MICROSECONDS"
+            },
+            {
+              "_enum": "5",
+              "_description": "NANOSECONDS"
+            },
+            {
+              "_enum": "10",
+              "_description": "MINUTES"
+            },
+            {
+              "_enum": "11",
+              "_description": "HOURS"
+            },
+            {
+              "_enum": "12",
+              "_description": "DAYS"
+            },
+            {
+              "_enum": "13",
+              "_description": "WEEKS"
+            },
+            {
+              "_enum": "14",
+              "_description": "MONTHS"
+            },
+            {
+              "_enum": "15",
+              "_description": "YEARS"
+            }
+          ]
+        },
+        {
+          "_number": "1430",
+          "_name": "VenueType",
+          "_type": "CHAR",
+          "value": [
+            {
+              "_enum": "E",
+              "_description": "ELECTRONIC"
+            },
+            {
+              "_enum": "P",
+              "_description": "PIT"
+            },
+            {
+              "_enum": "X",
+              "_description": "EX_PIT"
+            }
+          ]
+        },
+        {
+          "_number": "1431",
+          "_name": "RefOrdIDReason",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "GTC_FROM_PREVIOUS_DAY"
+            },
+            {
+              "_enum": "1",
+              "_description": "PARTIAL_FILL_REMAINING"
+            },
+            {
+              "_enum": "2",
+              "_description": "ORDER_CHANGED"
+            }
+          ]
+        },
+        {
+          "_number": "1432",
+          "_name": "OrigCustOrderCapacity",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT"
+            },
+            {
+              "_enum": "2",
+              "_description": "CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT"
+            },
+            {
+              "_enum": "3",
+              "_description": "MEMBER_TRADING_FOR_ANOTHER_MEMBER"
+            },
+            {
+              "_enum": "4",
+              "_description": "ALL_OTHER"
+            }
+          ]
+        },
+        {
+          "_number": "1433",
+          "_name": "RefApplReqID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1434",
+          "_name": "ModelType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "UTILITY_PROVIDED_STANDARD_MODEL"
+            },
+            {
+              "_enum": "1",
+              "_description": "PROPRIETARY"
+            }
+          ]
+        },
+        {
+          "_number": "1435",
+          "_name": "ContractMultiplierUnit",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "SHARES"
+            },
+            {
+              "_enum": "1",
+              "_description": "HOURS"
+            },
+            {
+              "_enum": "2",
+              "_description": "DAYS"
+            }
+          ]
+        },
+        {
+          "_number": "1436",
+          "_name": "LegContractMultiplierUnit",
+          "_type": "INT"
+        },
+        {
+          "_number": "1437",
+          "_name": "UnderlyingContractMultiplierUnit",
+          "_type": "INT"
+        },
+        {
+          "_number": "1438",
+          "_name": "DerivativeContractMultiplierUnit",
+          "_type": "INT"
+        },
+        {
+          "_number": "1439",
+          "_name": "FlowScheduleType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "NERC_EASTERN_OFF_PEAK"
+            },
+            {
+              "_enum": "1",
+              "_description": "NERC_WESTERN_OFF_PEAK"
+            },
+            {
+              "_enum": "2",
+              "_description": "NERC_CALENDAR_ALL_DAYS_IN_MONTH"
+            },
+            {
+              "_enum": "3",
+              "_description": "NERC_EASTERN_PEAK"
+            },
+            {
+              "_enum": "4",
+              "_description": "NERC_WESTERN_PEAK"
+            }
+          ]
+        },
+        {
+          "_number": "1440",
+          "_name": "LegFlowScheduleType",
+          "_type": "INT"
+        },
+        {
+          "_number": "1441",
+          "_name": "UnderlyingFlowScheduleType",
+          "_type": "INT"
+        },
+        {
+          "_number": "1442",
+          "_name": "DerivativeFlowScheduleType",
+          "_type": "INT"
+        },
+        {
+          "_number": "1443",
+          "_name": "FillLiquidityInd",
+          "_type": "INT"
+        },
+        {
+          "_number": "1444",
+          "_name": "SideLiquidityInd",
+          "_type": "INT"
+        },
+        {
+          "_number": "1445",
+          "_name": "NoRateSources",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1446",
+          "_name": "RateSource",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "BLOOMBERG"
+            },
+            {
+              "_enum": "1",
+              "_description": "REUTERS"
+            },
+            {
+              "_enum": "2",
+              "_description": "TELERATE"
+            },
+            {
+              "_enum": "99",
+              "_description": "OTHER"
+            }
+          ]
+        },
+        {
+          "_number": "1447",
+          "_name": "RateSourceType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "PRIMARY"
+            },
+            {
+              "_enum": "1",
+              "_description": "SECONDARY"
+            }
+          ]
+        },
+        {
+          "_number": "1448",
+          "_name": "ReferencePage",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1449",
+          "_name": "RestructuringType",
+          "_type": "STRING",
+          "value": [
+            {
+              "_enum": "FR",
+              "_description": "FULL_RESTRUCTURING"
+            },
+            {
+              "_enum": "MR",
+              "_description": "MODIFIED_RESTRUCTURING"
+            },
+            {
+              "_enum": "MM",
+              "_description": "MODIFIED_MOD_RESTRUCTURING"
+            },
+            {
+              "_enum": "XR",
+              "_description": "NO_RESTRUCTURING_SPECIFIED"
+            }
+          ]
+        },
+        {
+          "_number": "1450",
+          "_name": "Seniority",
+          "_type": "STRING",
+          "value": [
+            {
+              "_enum": "SD",
+              "_description": "SENIOR_SECURED"
+            },
+            {
+              "_enum": "SR",
+              "_description": "SENIOR"
+            },
+            {
+              "_enum": "SB",
+              "_description": "SUBORDINATED"
+            }
+          ]
+        },
+        {
+          "_number": "1451",
+          "_name": "NotionalPercentageOutstanding",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1452",
+          "_name": "OriginalNotionalPercentageOutstanding",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1453",
+          "_name": "UnderlyingRestructuringType",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1454",
+          "_name": "UnderlyingSeniority",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1455",
+          "_name": "UnderlyingNotionalPercentageOutstanding",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1456",
+          "_name": "UnderlyingOriginalNotionalPercentageOutstanding",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1457",
+          "_name": "AttachmentPoint",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1458",
+          "_name": "DetachmentPoint",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1459",
+          "_name": "UnderlyingAttachmentPoint",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1460",
+          "_name": "UnderlyingDetachmentPoint",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1461",
+          "_name": "NoTargetPartyIDs",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1462",
+          "_name": "TargetPartyID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1463",
+          "_name": "TargetPartyIDSource",
+          "_type": "CHAR"
+        },
+        {
+          "_number": "1464",
+          "_name": "TargetPartyRole",
+          "_type": "INT"
+        },
+        {
+          "_number": "1465",
+          "_name": "SecurityListID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1466",
+          "_name": "SecurityListRefID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1467",
+          "_name": "SecurityListDesc",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1468",
+          "_name": "EncodedSecurityListDescLen",
+          "_type": "LENGTH"
+        },
+        {
+          "_number": "1469",
+          "_name": "EncodedSecurityListDesc",
+          "_type": "DATA"
+        },
+        {
+          "_number": "1470",
+          "_name": "SecurityListType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "INDUSTRY_CLASSIFICATION"
+            },
+            {
+              "_enum": "2",
+              "_description": "TRADING_LIST"
+            },
+            {
+              "_enum": "3",
+              "_description": "MARKET"
+            },
+            {
+              "_enum": "4",
+              "_description": "NEWSPAPER_LIST"
+            }
+          ]
+        },
+        {
+          "_number": "1471",
+          "_name": "SecurityListTypeSource",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "ICB"
+            },
+            {
+              "_enum": "2",
+              "_description": "NAICS"
+            },
+            {
+              "_enum": "3",
+              "_description": "GICS"
+            }
+          ]
+        },
+        {
+          "_number": "1472",
+          "_name": "NewsID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1473",
+          "_name": "NewsCategory",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "COMPANY_NEWS"
+            },
+            {
+              "_enum": "1",
+              "_description": "MARKETPLACE_NEWS"
+            },
+            {
+              "_enum": "2",
+              "_description": "FINANCIAL_MARKET_NEWS"
+            },
+            {
+              "_enum": "3",
+              "_description": "TECHNICAL_NEWS"
+            },
+            {
+              "_enum": "99",
+              "_description": "OTHER_NEWS"
+            }
+          ]
+        },
+        {
+          "_number": "1474",
+          "_name": "LanguageCode",
+          "_type": "LANGUAGE"
+        },
+        {
+          "_number": "1475",
+          "_name": "NoNewsRefIDs",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1476",
+          "_name": "NewsRefID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1477",
+          "_name": "NewsRefType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "REPLACEMENT"
+            },
+            {
+              "_enum": "1",
+              "_description": "OTHER_LANGUAGE"
+            },
+            {
+              "_enum": "2",
+              "_description": "COMPLIMENTARY"
+            }
+          ]
+        },
+        {
+          "_number": "1478",
+          "_name": "StrikePriceDeterminationMethod",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "FIXED_STRIKE"
+            },
+            {
+              "_enum": "2",
+              "_description": "STRIKE_SET_AT_EXPIRATION_TO_UNDERLYING_OR_OTHER_VALUE"
+            },
+            {
+              "_enum": "3",
+              "_description": "STRIKE_SET_TO_AVERAGE_OF_UNDERLYING_SETTLEMENT_PRICE_ACROSS_THE_LIFE_OF_THE_OPTION"
+            },
+            {
+              "_enum": "4",
+              "_description": "STRIKE_SET_TO_OPTIMAL_VALUE"
+            }
+          ]
+        },
+        {
+          "_number": "1479",
+          "_name": "StrikePriceBoundaryMethod",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "LESS_THAN_UNDERLYING_PRICE_IS_IN_THE_MONEY"
+            },
+            {
+              "_enum": "2",
+              "_description": "LESS_THAN_OR_EQUAL_TO_THE_UNDERLYING_PRICE_IS_IN_THE_MONEY"
+            },
+            {
+              "_enum": "3",
+              "_description": "EQUAL_TO_THE_UNDERLYING_PRICE_IS_IN_THE_MONEY"
+            },
+            {
+              "_enum": "4",
+              "_description": "GREATER_THAN_OR_EQUAL_TO_UNDERLYING_PRICE_IS_IN_THE_MONEY"
+            },
+            {
+              "_enum": "5",
+              "_description": "GREATER_THAN_UNDERLYING_IS_IN_THE_MONEY"
+            }
+          ]
+        },
+        {
+          "_number": "1480",
+          "_name": "StrikePriceBoundaryPrecision",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1481",
+          "_name": "UnderlyingPriceDeterminationMethod",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "REGULAR"
+            },
+            {
+              "_enum": "2",
+              "_description": "SPECIAL_REFERENCE"
+            },
+            {
+              "_enum": "3",
+              "_description": "OPTIMAL_VALUE"
+            },
+            {
+              "_enum": "4",
+              "_description": "AVERAGE_VALUE"
+            }
+          ]
+        },
+        {
+          "_number": "1482",
+          "_name": "OptPayoutType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "VANILLA"
+            },
+            {
+              "_enum": "2",
+              "_description": "CAPPED"
+            },
+            {
+              "_enum": "3",
+              "_description": "BINARY"
+            }
+          ]
+        },
+        {
+          "_number": "1483",
+          "_name": "NoComplexEvents",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1484",
+          "_name": "ComplexEventType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "CAPPED"
+            },
+            {
+              "_enum": "2",
+              "_description": "TRIGGER"
+            },
+            {
+              "_enum": "3",
+              "_description": "KNOCK_IN_UP"
+            },
+            {
+              "_enum": "4",
+              "_description": "KOCK_IN_DOWN"
+            },
+            {
+              "_enum": "5",
+              "_description": "KNOCK_OUT_UP"
+            },
+            {
+              "_enum": "6",
+              "_description": "KNOCK_OUT_DOWN"
+            },
+            {
+              "_enum": "7",
+              "_description": "UNDERLYING"
+            },
+            {
+              "_enum": "8",
+              "_description": "RESET_BARRIER"
+            },
+            {
+              "_enum": "9",
+              "_description": "ROLLING_BARRIER"
+            }
+          ]
+        },
+        {
+          "_number": "1485",
+          "_name": "ComplexOptPayoutAmount",
+          "_type": "AMT"
+        },
+        {
+          "_number": "1486",
+          "_name": "ComplexEventPrice",
+          "_type": "PRICE"
+        },
+        {
+          "_number": "1487",
+          "_name": "ComplexEventPriceBoundaryMethod",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "LESS_THAN_COMPLEXEVENTPRICE"
+            },
+            {
+              "_enum": "2",
+              "_description": "LESS_THAN_OR_EQUAL_TO_COMPLEXEVENTPRICE"
+            },
+            {
+              "_enum": "3",
+              "_description": "EQUAL_TO_COMPLEXEVENTPRICE"
+            },
+            {
+              "_enum": "4",
+              "_description": "GREATER_THAN_OR_EQUAL_TO_COMPLEXEVENTPRICE"
+            },
+            {
+              "_enum": "5",
+              "_description": "GREATER_THAN_COMPLEXEVENTPRICE"
+            }
+          ]
+        },
+        {
+          "_number": "1488",
+          "_name": "ComplexEventPriceBoundaryPrecision",
+          "_type": "PERCENTAGE"
+        },
+        {
+          "_number": "1489",
+          "_name": "ComplexEventPriceTimeType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "EXPIRATION"
+            },
+            {
+              "_enum": "2",
+              "_description": "IMMEDIATE"
+            },
+            {
+              "_enum": "3",
+              "_description": "SPECIFIED_DATE_TIME"
+            }
+          ]
+        },
+        {
+          "_number": "1490",
+          "_name": "ComplexEventCondition",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "AND"
+            },
+            {
+              "_enum": "2",
+              "_description": "OR"
+            }
+          ]
+        },
+        {
+          "_number": "1491",
+          "_name": "NoComplexEventDates",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1492",
+          "_name": "ComplexEventStartDate",
+          "_type": "UTCTIMESTAMP"
+        },
+        {
+          "_number": "1493",
+          "_name": "ComplexEventEndDate",
+          "_type": "UTCTIMESTAMP"
+        },
+        {
+          "_number": "1494",
+          "_name": "NoComplexEventTimes",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1495",
+          "_name": "ComplexEventStartTime",
+          "_type": "UTCTIMEONLY"
+        },
+        {
+          "_number": "1496",
+          "_name": "ComplexEventEndTime",
+          "_type": "UTCTIMEONLY"
+        },
+        {
+          "_number": "1497",
+          "_name": "StreamAsgnReqID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1498",
+          "_name": "StreamAsgnReqType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "STREAM_ASSIGNMENT_FOR_NEW_CUSTOMER"
+            },
+            {
+              "_enum": "2",
+              "_description": "STREAM_ASSIGNMENT_FOR_EXISTING_CUSTOMER"
+            }
+          ]
+        },
+        {
+          "_number": "1499",
+          "_name": "NoAsgnReqs",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1500",
+          "_name": "MDStreamID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1501",
+          "_name": "StreamAsgnRptID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1502",
+          "_name": "StreamAsgnRejReason",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "UNKNOWN_CLIENT"
+            },
+            {
+              "_enum": "1",
+              "_description": "EXCEEDS_MAXIMUM_SIZE"
+            },
+            {
+              "_enum": "2",
+              "_description": "UNKNOWN_OR_INVALID_CURRENCY_PAIR"
+            },
+            {
+              "_enum": "3",
+              "_description": "NO_AVAILABLE_STREAM"
+            },
+            {
+              "_enum": "99",
+              "_description": "OTHER"
+            }
+          ]
+        },
+        {
+          "_number": "1503",
+          "_name": "StreamAsgnAckType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "ASSIGNMENT_ACCEPTED"
+            },
+            {
+              "_enum": "1",
+              "_description": "ASSIGNMENT_REJECTED"
+            }
+          ]
+        },
+        {
+          "_number": "1504",
+          "_name": "RelSymTransactTime",
+          "_type": "UTCTIMESTAMP"
+        },
+        {
+          "_number": "1617",
+          "_name": "StreamAsgnType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "ASSIGNMENT"
+            },
+            {
+              "_enum": "2",
+              "_description": "REJECTED"
+            },
+            {
+              "_enum": "3",
+              "_description": "TERMINATE_UNASSIGN"
+            }
+          ]
+        },
+        {
+          "_number": "2376",
+          "_name": "PartyRoleQualifier",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "23",
+              "_description": "FirmOrLegalEntity"
+            },
+            {
+              "_enum": "18",
+              "_description": "Current"
+            },
+            {
+              "_enum": "19",
+              "_description": "New"
+            },
+            {
+              "_enum": "24",
+              "_description": "NaturalPerson"
+            },
+            {
+              "_enum": "0",
+              "_description": "Agency"
+            },
+            {
+              "_enum": "1",
+              "_description": "Principal"
+            },
+            {
+              "_enum": "2",
+              "_description": "RisklessPrincipal"
+            },
+            {
+              "_enum": "9",
+              "_description": "PrimaryTradeRepository"
+            },
+            {
+              "_enum": "10",
+              "_description": "OriginalTradeRepository"
+            },
+            {
+              "_enum": "11",
+              "_description": "AdditionalInternationalTradeRepository"
+            },
+            {
+              "_enum": "12",
+              "_description": "AdditionalDomesticTradeRepository"
+            },
+            {
+              "_enum": "25",
+              "_description": "RegularTrader"
+            },
+            {
+              "_enum": "26",
+              "_description": "HeadTrader"
+            },
+            {
+              "_enum": "27",
+              "_description": "Supervisor"
+            },
+            {
+              "_enum": "22",
+              "_description": "Algorithm"
+            },
+            {
+              "_enum": "13",
+              "_description": "RelatedExchange"
+            },
+            {
+              "_enum": "14",
+              "_description": "OptionsExchange"
+            },
+            {
+              "_enum": "15",
+              "_description": "SpecifiedExchange"
+            },
+            {
+              "_enum": "16",
+              "_description": "ConstituentExchange"
+            },
+            {
+              "_enum": "7",
+              "_description": "Bank"
+            },
+            {
+              "_enum": "8",
+              "_description": "Hub"
+            },
+            {
+              "_enum": "3",
+              "_description": "GeneralClearingMember"
+            },
+            {
+              "_enum": "4",
+              "_description": "IndividualClearingMember"
+            },
+            {
+              "_enum": "5",
+              "_description": "PreferredMarketMaker"
+            },
+            {
+              "_enum": "6",
+              "_description": "DirectedMarketMaker"
+            },
+            {
+              "_enum": "20",
+              "_description": "DesignatedSponsor"
+            },
+            {
+              "_enum": "21",
+              "_description": "Specialist"
+            },
+            {
+              "_enum": "17",
+              "_description": "ExemptFromTradeReporting"
+            }
+          ]
+        },
+        {
+          "_number": "2668",
+          "_name": "NoTrdRegPublications",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "2669",
+          "_name": "TrdRegPublicationType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "PRETRADE_TRANSPARENCY_WAIVER"
+            },
+            {
+              "_enum": "1",
+              "_description": "POSTTRADE_DEFERRAL"
+            },
+            {
+              "_enum": "2",
+              "_description": "EXEMPT_FROM_PUBLICATION"
+            }
+          ]
+        },
+        {
+          "_number": "2670",
+          "_name": "TrdRegPublicationReason",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "No preceding order in book as transaction price set within average spread of a liquid instrument"
+            },
+            {
+              "_enum": "1",
+              "_description": "No preceding order in book as transaction price depends on system-set reference price for an illiquid instrument"
+            },
+            {
+              "_enum": "2",
+              "_description": "No preceding order in book as transaction price is for transaction subject to conditions other than current market price"
+            },
+            {
+              "_enum": "3",
+              "_description": "No public price for preceding order as public reference price was used for matching orders"
+            },
+            {
+              "_enum": "4",
+              "_description": "No public price quoted as instrument is illiquid"
+            },
+            {
+              "_enum": "5",
+              "_description": "No public price quoted due to 'Size'"
+            },
+            {
+              "_enum": "6",
+              "_description": "Deferral due to 'Large in Scale'"
+            },
+            {
+              "_enum": "7",
+              "_description": "Deferral due to 'Illiquid Instrument'"
+            },
+            {
+              "_enum": "8",
+              "_description": "Deferral due to 'Size Specific'"
+            },
+            {
+              "_enum": "9",
+              "_description": "No public price and/or size quoted as transaction is 'large in scale'"
+            },
+            {
+              "_enum": "10",
+              "_description": "No public price and/or size quoted due to order being hidden"
+            },
+            {
+              "_enum": "11",
+              "_description": "Exempted due to securities financing transaction"
+            },
+            {
+              "_enum": "12",
+              "_description": "Exempted due to European System of Central Banks (ESCB) policy transaction"
+            }
+          ]
+        },
+        {
+          "_number": "1838",
+          "_name": "NoTradePriceConditions",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1839",
+          "_name": "TradePriceCondition",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "Special cum dividend (CD)"
+            },
+            {
+              "_enum": "1",
+              "_description": "Special cum rights (CR)"
+            },
+            {
+              "_enum": "2",
+              "_description": "Special ex dividend (XD)"
+            },
+            {
+              "_enum": "3",
+              "_description": "Special ex rights (XR)"
+            },
+            {
+              "_enum": "4",
+              "_description": "Special cum coupon (CC)"
+            },
+            {
+              "_enum": "5",
+              "_description": "Special cum capital repayments (CP)"
+            },
+            {
+              "_enum": "6",
+              "_description": "Special ex coupon (XC)"
+            },
+            {
+              "_enum": "7",
+              "_description": "Special ex capital repayments (XP)"
+            },
+            {
+              "_enum": "8",
+              "_description": "Cash settlement (CS)"
+            },
+            {
+              "_enum": "9",
+              "_description": "Special cum bonus (CB)"
+            },
+            {
+              "_enum": "10",
+              "_description": "Special price (SP)"
+            },
+            {
+              "_enum": "11",
+              "_description": "Special ex bonus (XB)"
+            },
+            {
+              "_enum": "12",
+              "_description": "Guaranteed delivery (GD)"
+            },
+            {
+              "_enum": "13",
+              "_description": "Special dividend"
+            },
+            {
+              "_enum": "14",
+              "_description": "Price improvement"
+            },
+            {
+              "_enum": "15",
+              "_description": "Non-price forming trade"
+            },
+            {
+              "_enum": "16",
+              "_description": "Trade exempted from trading obligation"
+            },
+            {
+              "_enum": "17",
+              "_description": "Price or strike price is pending"
+            },
+            {
+              "_enum": "18",
+              "_description": "Price is not applicable"
+            }
+          ]
+        },
+        {
+          "_number": "2593",
+          "_name": "NoOrderAttributes",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "2594",
+          "_name": "OrderAttributeType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "Aggregated order"
+            },
+            {
+              "_enum": "1",
+              "_description": "Pending allocation"
+            },
+            {
+              "_enum": "2",
+              "_description": "Liquidity provision activity order"
+            },
+            {
+              "_enum": "3",
+              "_description": "Risk reduction order"
+            },
+            {
+              "_enum": "4",
+              "_description": "Algorithmic order"
+            },
+            {
+              "_enum": "5",
+              "_description": "Systemic internaliser order"
+            },
+            {
+              "_enum": "6",
+              "_description": "All executions for the order are to be submitted to an APA"
+            },
+            {
+              "_enum": "7",
+              "_description": "Order execution instructed by client"
+            },
+            {
+              "_enum": "8",
+              "_description": "Large in scale"
+            },
+            {
+              "_enum": "9",
+              "_description": "Hidden"
+            }
+          ]
+        },
+        {
+          "_number": "2595",
+          "_name": "OrderAttributeValue",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1907",
+          "_name": "NoRegulatoryTradeIDs",
+          "_type": "NUMINGROUP"
+        },
+        {
+          "_number": "1903",
+          "_name": "RegulatoryTradeID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1905",
+          "_name": "RegulatoryTradeIDSource",
+          "_type": "STRING"
+        },
+        {
+          "_number": "1904",
+          "_name": "RegulatoryTradeIDEvent",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "Initial block trade"
+            },
+            {
+              "_enum": "1",
+              "_description": "Allocation"
+            },
+            {
+              "_enum": "2",
+              "_description": "Clearing"
+            },
+            {
+              "_enum": "3",
+              "_description": "Compression"
+            },
+            {
+              "_enum": "4",
+              "_description": "Novation"
+            },
+            {
+              "_enum": "5",
+              "_description": "Termination"
+            },
+            {
+              "_enum": "6",
+              "_description": "Post-trade valuation"
+            }
+          ]
+        },
+        {
+          "_number": "1906",
+          "_name": "RegulatoryTradeIDType",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "Current"
+            },
+            {
+              "_enum": "1",
+              "_description": "Previous"
+            },
+            {
+              "_enum": "2",
+              "_description": "Block"
+            },
+            {
+              "_enum": "3",
+              "_description": "Related"
+            },
+            {
+              "_enum": "4",
+              "_description": "Cleared block trade"
+            },
+            {
+              "_enum": "5",
+              "_description": "Trading venue transaction identifier"
+            }
+          ]
+        },
+        {
+          "_number": "2411",
+          "_name": "RegulatoryLegRefID",
+          "_type": "STRING"
+        },
+        {
+          "_number": "2397",
+          "_name": "RegulatoryTradeIDScope",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "1",
+              "_description": "Clearing member"
+            },
+            {
+              "_enum": "2",
+              "_description": "Client"
+            }
+          ]
+        },
+        {
+          "_number": "2667",
+          "_name": "AlgorithmicTradeIndicator ",
+          "_type": "INT",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "Non-algorithmic trade"
+            },
+            {
+              "_enum": "1",
+              "_description": "Algorithmic trade"
             }
           ]
         }

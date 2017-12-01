@@ -13,11 +13,11 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "nodefix": "~1.2.8",
+    "nodefix": "~1.2.9",
     "dict": "~1.4.0",
     "express-validator": "~2.20.8",
-    "redis":"~2.6.2",
-    "async-while":"~1.1.0",
+    "redis": "~2.6.2",
+    "async-while": "~1.1.0",
     "log": "~1.4.0",
     "jsonfile": "~4.0.0"
   }

@@ -2,7 +2,7 @@
   "fix": {
     "_type": "FIX",
     "_major": "4",
-    "_minor": "1",
+    "_minor": "0",
     "_servicepack": "0",
     "header": {
       "field": [
@@ -51,15 +51,7 @@
           "_required": "N"
         },
         {
-          "_name": "SenderLocationID",
-          "_required": "N"
-        },
-        {
           "_name": "TargetSubID",
-          "_required": "N"
-        },
-        {
-          "_name": "TargetLocationID",
           "_required": "N"
         },
         {
@@ -67,15 +59,7 @@
           "_required": "N"
         },
         {
-          "_name": "OnBehalfOfLocationID",
-          "_required": "N"
-        },
-        {
           "_name": "DeliverToSubID",
-          "_required": "N"
-        },
-        {
-          "_name": "DeliverToLocationID",
           "_required": "N"
         },
         {
@@ -204,34 +188,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -272,26 +228,14 @@
               "_required": "N"
             },
             {
-              "_name": "Text",
-              "_required": "N"
-            },
-            {
-              "_name": "TransactTime",
-              "_required": "N"
-            },
-            {
-              "_name": "URLLink",
-              "_required": "N"
-            }
-          ],
-          "group": {
-            "_name": "NoIOIQualifiers",
-            "_required": "N",
-            "field": {
               "_name": "IOIQualifier",
               "_required": "N"
+            },
+            {
+              "_name": "Text",
+              "_required": "N"
             }
-          }
+          ]
         },
         {
           "_name": "Advertisement",
@@ -327,34 +271,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -379,23 +295,11 @@
               "_required": "N"
             },
             {
-              "_name": "TradeDate",
-              "_required": "N"
-            },
-            {
               "_name": "TransactTime",
               "_required": "N"
             },
             {
               "_name": "Text",
-              "_required": "N"
-            },
-            {
-              "_name": "URLLink",
-              "_required": "N"
-            },
-            {
-              "_name": "LastMkt",
               "_required": "N"
             }
           ]
@@ -410,15 +314,7 @@
               "_required": "Y"
             },
             {
-              "_name": "SecondaryOrderID",
-              "_required": "N"
-            },
-            {
               "_name": "ClOrdID",
-              "_required": "N"
-            },
-            {
-              "_name": "OrigClOrdID",
               "_required": "N"
             },
             {
@@ -444,10 +340,6 @@
             {
               "_name": "ExecRefID",
               "_required": "N"
-            },
-            {
-              "_name": "ExecType",
-              "_required": "Y"
             },
             {
               "_name": "OrdStatus",
@@ -486,34 +378,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -539,10 +403,6 @@
             },
             {
               "_name": "StopPx",
-              "_required": "N"
-            },
-            {
-              "_name": "PegDifference",
               "_required": "N"
             },
             {
@@ -574,24 +434,12 @@
               "_required": "Y"
             },
             {
-              "_name": "LastSpotRate",
-              "_required": "N"
-            },
-            {
-              "_name": "LastForwardPoints",
-              "_required": "N"
-            },
-            {
               "_name": "LastMkt",
               "_required": "N"
             },
             {
               "_name": "LastCapacity",
               "_required": "N"
-            },
-            {
-              "_name": "LeavesQty",
-              "_required": "Y"
             },
             {
               "_name": "CumQty",
@@ -622,6 +470,10 @@
               "_required": "N"
             },
             {
+              "_name": "NetMoney",
+              "_required": "N"
+            },
+            {
               "_name": "SettlCurrAmt",
               "_required": "N"
             },
@@ -630,18 +482,28 @@
               "_required": "N"
             },
             {
-              "_name": "SettlCurrFxRate",
-              "_required": "N"
-            },
-            {
-              "_name": "SettlCurrFxRateCalc",
-              "_required": "N"
-            },
-            {
               "_name": "Text",
               "_required": "N"
             }
-          ]
+          ],
+          "group": {
+            "_name": "NoMiscFees",
+            "_required": "N",
+            "field": [
+              {
+                "_name": "MiscFeeAmt",
+                "_required": "N"
+              },
+              {
+                "_name": "MiscFeeCurr",
+                "_required": "N"
+              },
+              {
+                "_name": "MiscFeeType",
+                "_required": "N"
+              }
+            ]
+          }
         },
         {
           "_name": "OrderCancelReject",
@@ -653,19 +515,7 @@
               "_required": "Y"
             },
             {
-              "_name": "SecondaryOrderID",
-              "_required": "N"
-            },
-            {
               "_name": "ClOrdID",
-              "_required": "Y"
-            },
-            {
-              "_name": "OrigClOrdID",
-              "_required": "Y"
-            },
-            {
-              "_name": "OrdStatus",
               "_required": "Y"
             },
             {
@@ -710,10 +560,6 @@
             {
               "_name": "RawData",
               "_required": "N"
-            },
-            {
-              "_name": "ResetSeqNumFlag",
-              "_required": "N"
             }
           ]
         },
@@ -731,12 +577,16 @@
               "_required": "N"
             },
             {
-              "_name": "Headline",
+              "_name": "RelatdSym",
+              "_required": "N"
+            },
+            {
+              "_name": "LinesOfText",
               "_required": "Y"
             },
             {
-              "_name": "URLLink",
-              "_required": "N"
+              "_name": "Text",
+              "_required": "Y"
             },
             {
               "_name": "RawDataLength",
@@ -746,74 +596,6 @@
               "_name": "RawData",
               "_required": "N"
             }
-          ],
-          "group": [
-            {
-              "_name": "NoRelatedSym",
-              "_required": "N",
-              "field": [
-                {
-                  "_name": "RelatdSym",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SymbolSfx",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityID",
-                  "_required": "N"
-                },
-                {
-                  "_name": "IDSource",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityType",
-                  "_required": "N"
-                },
-                {
-                  "_name": "MaturityMonthYear",
-                  "_required": "N"
-                },
-                {
-                  "_name": "MaturityDay",
-                  "_required": "N"
-                },
-                {
-                  "_name": "PutOrCall",
-                  "_required": "N"
-                },
-                {
-                  "_name": "StrikePrice",
-                  "_required": "N"
-                },
-                {
-                  "_name": "OptAttribute",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityExchange",
-                  "_required": "N"
-                },
-                {
-                  "_name": "Issuer",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityDesc",
-                  "_required": "N"
-                }
-              ]
-            },
-            {
-              "_name": "LinesOfText",
-              "_required": "Y",
-              "field": {
-                "_name": "Text",
-                "_required": "Y"
-              }
-            }
           ]
         },
         {
@@ -821,10 +603,6 @@
           "_msgtype": "C",
           "_msgcat": "app",
           "field": [
-            {
-              "_name": "EmailThreadID",
-              "_required": "Y"
-            },
             {
               "_name": "EmailType",
               "_required": "Y"
@@ -834,8 +612,8 @@
               "_required": "N"
             },
             {
-              "_name": "Subject",
-              "_required": "Y"
+              "_name": "RelatdSym",
+              "_required": "N"
             },
             {
               "_name": "OrderID",
@@ -846,80 +624,20 @@
               "_required": "N"
             },
             {
+              "_name": "LinesOfText",
+              "_required": "Y"
+            },
+            {
+              "_name": "Text",
+              "_required": "Y"
+            },
+            {
               "_name": "RawDataLength",
               "_required": "N"
             },
             {
               "_name": "RawData",
               "_required": "N"
-            }
-          ],
-          "group": [
-            {
-              "_name": "NoRelatedSym",
-              "_required": "N",
-              "field": [
-                {
-                  "_name": "RelatdSym",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SymbolSfx",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityID",
-                  "_required": "N"
-                },
-                {
-                  "_name": "IDSource",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityType",
-                  "_required": "N"
-                },
-                {
-                  "_name": "MaturityMonthYear",
-                  "_required": "N"
-                },
-                {
-                  "_name": "MaturityDay",
-                  "_required": "N"
-                },
-                {
-                  "_name": "PutOrCall",
-                  "_required": "N"
-                },
-                {
-                  "_name": "StrikePrice",
-                  "_required": "N"
-                },
-                {
-                  "_name": "OptAttribute",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityExchange",
-                  "_required": "N"
-                },
-                {
-                  "_name": "Issuer",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecurityDesc",
-                  "_required": "N"
-                }
-              ]
-            },
-            {
-              "_name": "LinesOfText",
-              "_required": "Y",
-              "field": {
-                "_name": "Text",
-                "_required": "Y"
-              }
             }
           ]
         },
@@ -993,34 +711,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -1042,11 +732,7 @@
             },
             {
               "_name": "OrderQty",
-              "_required": "N"
-            },
-            {
-              "_name": "CashOrderQty",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "OrdType",
@@ -1102,34 +788,6 @@
             },
             {
               "_name": "Text",
-              "_required": "N"
-            },
-            {
-              "_name": "FutSettDate2",
-              "_required": "N"
-            },
-            {
-              "_name": "OrderQty2",
-              "_required": "N"
-            },
-            {
-              "_name": "OpenClose",
-              "_required": "N"
-            },
-            {
-              "_name": "CoveredOrUncovered",
-              "_required": "N"
-            },
-            {
-              "_name": "CustomerOrFirm",
-              "_required": "N"
-            },
-            {
-              "_name": "MaxShow",
-              "_required": "N"
-            },
-            {
-              "_name": "PegDifference",
               "_required": "N"
             }
           ]
@@ -1224,34 +882,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -1285,10 +915,6 @@
             },
             {
               "_name": "StopPx",
-              "_required": "N"
-            },
-            {
-              "_name": "PegDifference",
               "_required": "N"
             },
             {
@@ -1326,30 +952,6 @@
             {
               "_name": "Text",
               "_required": "N"
-            },
-            {
-              "_name": "FutSettDate2",
-              "_required": "N"
-            },
-            {
-              "_name": "OrderQty2",
-              "_required": "N"
-            },
-            {
-              "_name": "OpenClose",
-              "_required": "N"
-            },
-            {
-              "_name": "CoveredOrUncovered",
-              "_required": "N"
-            },
-            {
-              "_name": "CustomerOrFirm",
-              "_required": "N"
-            },
-            {
-              "_name": "MaxShow",
-              "_required": "N"
             }
           ]
         },
@@ -1373,6 +975,10 @@
             {
               "_name": "ListID",
               "_required": "N"
+            },
+            {
+              "_name": "CxlType",
+              "_required": "Y"
             },
             {
               "_name": "ClientID",
@@ -1399,34 +1005,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -1440,11 +1018,7 @@
             },
             {
               "_name": "OrderQty",
-              "_required": "N"
-            },
-            {
-              "_name": "CashOrderQty",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "Text",
@@ -1530,34 +1104,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -1571,11 +1117,7 @@
             },
             {
               "_name": "OrderQty",
-              "_required": "N"
-            },
-            {
-              "_name": "CashOrderQty",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "OrdType",
@@ -1587,10 +1129,6 @@
             },
             {
               "_name": "StopPx",
-              "_required": "N"
-            },
-            {
-              "_name": "PegDifference",
               "_required": "N"
             },
             {
@@ -1628,34 +1166,6 @@
             {
               "_name": "Text",
               "_required": "N"
-            },
-            {
-              "_name": "FutSettDate2",
-              "_required": "N"
-            },
-            {
-              "_name": "OrderQty2",
-              "_required": "N"
-            },
-            {
-              "_name": "OpenClose",
-              "_required": "N"
-            },
-            {
-              "_name": "CoveredOrUncovered",
-              "_required": "N"
-            },
-            {
-              "_name": "CustomerOrFirm",
-              "_required": "N"
-            },
-            {
-              "_name": "MaxShow",
-              "_required": "N"
-            },
-            {
-              "_name": "LocateReqd",
-              "_required": "N"
             }
           ]
         },
@@ -1686,42 +1196,6 @@
             },
             {
               "_name": "SymbolSfx",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityID",
-              "_required": "N"
-            },
-            {
-              "_name": "IDSource",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
               "_required": "N"
             },
             {
@@ -1756,14 +1230,6 @@
               "_required": "N"
             },
             {
-              "_name": "AllocLinkID",
-              "_required": "N"
-            },
-            {
-              "_name": "AllocLinkType",
-              "_required": "N"
-            },
-            {
               "_name": "Side",
               "_required": "Y"
             },
@@ -1784,34 +1250,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -1822,10 +1260,6 @@
             {
               "_name": "Shares",
               "_required": "Y"
-            },
-            {
-              "_name": "LastMkt",
-              "_required": "N"
             },
             {
               "_name": "AvgPx",
@@ -1860,37 +1294,33 @@
               "_required": "N"
             },
             {
+              "_name": "SettlCurrAmt",
+              "_required": "N"
+            },
+            {
+              "_name": "SettlCurrency",
+              "_required": "N"
+            },
+            {
               "_name": "OpenClose",
               "_required": "N"
             },
             {
               "_name": "Text",
               "_required": "N"
-            },
-            {
-              "_name": "NumDaysInterest",
-              "_required": "N"
-            },
-            {
-              "_name": "AccruedInterestRate",
-              "_required": "N"
             }
           ],
           "group": [
             {
               "_name": "NoOrders",
-              "_required": "N",
+              "_required": "Y",
               "field": [
                 {
                   "_name": "ClOrdID",
-                  "_required": "N"
+                  "_required": "Y"
                 },
                 {
                   "_name": "OrderID",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SecondaryOrderID",
                   "_required": "N"
                 },
                 {
@@ -1908,11 +1338,11 @@
               "_required": "N",
               "field": [
                 {
-                  "_name": "LastShares",
+                  "_name": "ExecID",
                   "_required": "N"
                 },
                 {
-                  "_name": "ExecID",
+                  "_name": "LastShares",
                   "_required": "N"
                 },
                 {
@@ -1920,18 +1350,36 @@
                   "_required": "N"
                 },
                 {
-                  "_name": "LastCapacity",
+                  "_name": "LastMkt",
+                  "_required": "N"
+                }
+              ]
+            },
+            {
+              "_name": "NoMiscFees",
+              "_required": "N",
+              "field": [
+                {
+                  "_name": "MiscFeeAmt",
+                  "_required": "N"
+                },
+                {
+                  "_name": "MiscFeeCurr",
+                  "_required": "N"
+                },
+                {
+                  "_name": "MiscFeeType",
                   "_required": "N"
                 }
               ]
             },
             {
               "_name": "NoAllocs",
-              "_required": "N",
+              "_required": "Y",
               "field": [
                 {
                   "_name": "AllocAccount",
-                  "_required": "N"
+                  "_required": "Y"
                 },
                 {
                   "_name": "AllocShares",
@@ -1939,22 +1387,6 @@
                 },
                 {
                   "_name": "ProcessCode",
-                  "_required": "N"
-                },
-                {
-                  "_name": "BrokerOfCredit",
-                  "_required": "N"
-                },
-                {
-                  "_name": "NotifyBrokerOfCredit",
-                  "_required": "N"
-                },
-                {
-                  "_name": "AllocHandlInst",
-                  "_required": "N"
-                },
-                {
-                  "_name": "AllocText",
                   "_required": "N"
                 },
                 {
@@ -1974,56 +1406,18 @@
                   "_required": "N"
                 },
                 {
-                  "_name": "AllocAvgPx",
+                  "_name": "NoDlvyInst",
                   "_required": "N"
                 },
                 {
-                  "_name": "AllocNetMoney",
+                  "_name": "BrokerOfCredit",
                   "_required": "N"
                 },
                 {
-                  "_name": "SettlCurrAmt",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SettlCurrency",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SettlCurrFxRate",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SettlCurrFxRateCalc",
-                  "_required": "N"
-                },
-                {
-                  "_name": "AccruedInterestAmt",
-                  "_required": "N"
-                },
-                {
-                  "_name": "SettlInstMode",
+                  "_name": "DlvyInst",
                   "_required": "N"
                 }
-              ],
-              "group": {
-                "_name": "NoMiscFees",
-                "_required": "N",
-                "field": [
-                  {
-                    "_name": "MiscFeeAmt",
-                    "_required": "N"
-                  },
-                  {
-                    "_name": "MiscFeeCurr",
-                    "_required": "N"
-                  },
-                  {
-                    "_name": "MiscFeeType",
-                    "_required": "N"
-                  }
-                ]
-              }
+              ]
             }
           ]
         },
@@ -2119,10 +1513,6 @@
                 "_required": "Y"
               },
               {
-                "_name": "LeavesQty",
-                "_required": "Y"
-              },
-              {
                 "_name": "CxlQty",
                 "_required": "Y"
               },
@@ -2194,72 +1584,20 @@
               "_required": "Y"
             },
             {
-              "_name": "SymbolSfx",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityID",
-              "_required": "N"
-            },
-            {
-              "_name": "IDSource",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
-              "_name": "Issuer",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityDesc",
-              "_required": "N"
-            },
-            {
               "_name": "Side",
               "_required": "Y"
             },
             {
               "_name": "OrderQty",
-              "_required": "N"
-            },
-            {
-              "_name": "CashOrderQty",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "LastShares",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "LastPx",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "Text",
@@ -2293,34 +1631,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -2338,22 +1648,6 @@
             },
             {
               "_name": "OrderQty",
-              "_required": "N"
-            },
-            {
-              "_name": "FutSettDate",
-              "_required": "N"
-            },
-            {
-              "_name": "OrdType",
-              "_required": "N"
-            },
-            {
-              "_name": "FutSettDate2",
-              "_required": "N"
-            },
-            {
-              "_name": "OrderQty2",
               "_required": "N"
             }
           ]
@@ -2388,34 +1682,6 @@
               "_required": "N"
             },
             {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityMonthYear",
-              "_required": "N"
-            },
-            {
-              "_name": "MaturityDay",
-              "_required": "N"
-            },
-            {
-              "_name": "PutOrCall",
-              "_required": "N"
-            },
-            {
-              "_name": "StrikePrice",
-              "_required": "N"
-            },
-            {
-              "_name": "OptAttribute",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityExchange",
-              "_required": "N"
-            },
-            {
               "_name": "Issuer",
               "_required": "N"
             },
@@ -2425,7 +1691,7 @@
             },
             {
               "_name": "BidPx",
-              "_required": "N"
+              "_required": "Y"
             },
             {
               "_name": "OfferPx",
@@ -2441,185 +1707,6 @@
             },
             {
               "_name": "ValidUntilTime",
-              "_required": "N"
-            },
-            {
-              "_name": "BidSpotRate",
-              "_required": "N"
-            },
-            {
-              "_name": "OfferSpotRate",
-              "_required": "N"
-            },
-            {
-              "_name": "BidForwardPoints",
-              "_required": "N"
-            },
-            {
-              "_name": "OfferForwardPoints",
-              "_required": "N"
-            },
-            {
-              "_name": "TransactTime",
-              "_required": "N"
-            },
-            {
-              "_name": "FutSettDate",
-              "_required": "N"
-            },
-            {
-              "_name": "OrdType",
-              "_required": "N"
-            },
-            {
-              "_name": "FutSettDate2",
-              "_required": "N"
-            },
-            {
-              "_name": "OrderQty2",
-              "_required": "N"
-            }
-          ]
-        },
-        {
-          "_name": "SettlementInstructions",
-          "_msgtype": "T",
-          "_msgcat": "app",
-          "field": [
-            {
-              "_name": "SettlInstID",
-              "_required": "Y"
-            },
-            {
-              "_name": "SettlInstTransType",
-              "_required": "Y"
-            },
-            {
-              "_name": "SettlInstMode",
-              "_required": "Y"
-            },
-            {
-              "_name": "SettlInstSource",
-              "_required": "Y"
-            },
-            {
-              "_name": "AllocAccount",
-              "_required": "Y"
-            },
-            {
-              "_name": "SettlLocation",
-              "_required": "N"
-            },
-            {
-              "_name": "TradeDate",
-              "_required": "N"
-            },
-            {
-              "_name": "AllocID",
-              "_required": "N"
-            },
-            {
-              "_name": "LastMkt",
-              "_required": "N"
-            },
-            {
-              "_name": "Side",
-              "_required": "N"
-            },
-            {
-              "_name": "SecurityType",
-              "_required": "N"
-            },
-            {
-              "_name": "EffectiveTime",
-              "_required": "N"
-            },
-            {
-              "_name": "TransactTime",
-              "_required": "Y"
-            },
-            {
-              "_name": "ClientID",
-              "_required": "N"
-            },
-            {
-              "_name": "ExecBroker",
-              "_required": "N"
-            },
-            {
-              "_name": "StandInstDbType",
-              "_required": "N"
-            },
-            {
-              "_name": "StandInstDbName",
-              "_required": "N"
-            },
-            {
-              "_name": "StandInstDbID",
-              "_required": "N"
-            },
-            {
-              "_name": "SettlDeliveryType",
-              "_required": "N"
-            },
-            {
-              "_name": "SettlDepositoryCode",
-              "_required": "N"
-            },
-            {
-              "_name": "SettlBrkrCode",
-              "_required": "N"
-            },
-            {
-              "_name": "SettlInstCode",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentName",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentCode",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentAcctNum",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentAcctName",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentContactName",
-              "_required": "N"
-            },
-            {
-              "_name": "SecuritySettlAgentContactPhone",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentName",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentCode",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentAcctNum",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentAcctName",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentContactName",
-              "_required": "N"
-            },
-            {
-              "_name": "CashSettlAgentContactPhone",
               "_required": "N"
             }
           ]
@@ -2652,12 +1739,12 @@
         {
           "_number": "2",
           "_name": "AdvId",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "3",
           "_name": "AdvRefID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "4",
@@ -2773,7 +1860,7 @@
         {
           "_number": "17",
           "_name": "ExecID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "18",
@@ -2879,21 +1966,13 @@
             {
               "_enum": "S",
               "_description": "SUSPEND"
-            },
-            {
-              "_enum": "U",
-              "_description": "CUSTOMER_DISPLAY_INSTRUCTION"
-            },
-            {
-              "_enum": "V",
-              "_description": "NETTING"
             }
           ]
         },
         {
           "_number": "19",
           "_name": "ExecRefID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "20",
@@ -2961,21 +2040,13 @@
             {
               "_enum": "5",
               "_description": "RIC_CODE"
-            },
-            {
-              "_enum": "6",
-              "_description": "ISO_CURRENCY_CODE"
-            },
-            {
-              "_enum": "7",
-              "_description": "ISO_COUNTRY_CODE"
             }
           ]
         },
         {
           "_number": "23",
           "_name": "IOIid",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "24",
@@ -3014,7 +2085,7 @@
         {
           "_number": "26",
           "_name": "IOIRefID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "27",
@@ -3214,10 +2285,6 @@
             {
               "_enum": "S",
               "_description": "QUOTE"
-            },
-            {
-              "_enum": "T",
-              "_description": "SETTLEMENT_INSTRUCTIONS"
             }
           ]
         },
@@ -3346,7 +2413,7 @@
             },
             {
               "_enum": "C",
-              "_description": "FOREX_C"
+              "_description": "FOREX"
             },
             {
               "_enum": "D",
@@ -3355,18 +2422,6 @@
             {
               "_enum": "E",
               "_description": "PREVIOUSLY_INDICATED"
-            },
-            {
-              "_enum": "F",
-              "_description": "FOREX_F"
-            },
-            {
-              "_enum": "G",
-              "_description": "FOREX_G"
-            },
-            {
-              "_enum": "H",
-              "_description": "FOREX_H"
             },
             {
               "_enum": "P",
@@ -3424,28 +2479,12 @@
               "_description": "AGENCY_SINGLE_ORDER"
             },
             {
-              "_enum": "B",
-              "_description": "SHORT_EXEMPT_TRANSACTION_B"
-            },
-            {
               "_enum": "C",
               "_description": "PROGRAM_ORDER_NON_INDEX_ARB_FOR_MEMBER_FIRM_ORG"
             },
             {
               "_enum": "D",
               "_description": "PROGRAM_ORDER_INDEX_ARB_FOR_MEMBER_FIRM_ORG"
-            },
-            {
-              "_enum": "E",
-              "_description": "REGISTERED_EQUITY_MARKET_MAKER_TRADES"
-            },
-            {
-              "_enum": "F",
-              "_description": "SHORT_EXEMPT_TRANSACTION_F"
-            },
-            {
-              "_enum": "H",
-              "_description": "SHORT_EXEMPT_TRANSACTION_H"
             },
             {
               "_enum": "I",
@@ -3460,36 +2499,12 @@
               "_description": "PROGRAM_ORDER_NON_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER"
             },
             {
-              "_enum": "L",
-              "_description": "SHORT_EXEMPT_TRANSACTION_FOR_MEMBER_COMPETING_MARKET_MAKER_AFFILIATED_WITH_THE_FIRM_CLEARING_THE_TRADE"
-            },
-            {
               "_enum": "M",
               "_description": "PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_MEMBER"
             },
             {
               "_enum": "N",
               "_description": "PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_MEMBER"
-            },
-            {
-              "_enum": "O",
-              "_description": "COMPETING_DEALER_TRADES_O"
-            },
-            {
-              "_enum": "P",
-              "_description": "PRINCIPAL"
-            },
-            {
-              "_enum": "R",
-              "_description": "COMPETING_DEALER_TRADES_R"
-            },
-            {
-              "_enum": "S",
-              "_description": "SPECIALIST_TRADES"
-            },
-            {
-              "_enum": "T",
-              "_description": "COMPETING_DEALER_TRADES_T"
             },
             {
               "_enum": "U",
@@ -3500,16 +2515,8 @@
               "_description": "ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER"
             },
             {
-              "_enum": "X",
-              "_description": "SHORT_EXEMPT_TRANSACTION_FOR_MEMBER_COMPETING_MARKET_MAKER_NOT_AFFILIATED_WITH_THE_FIRM_CLEARING_THE_TRADE"
-            },
-            {
               "_enum": "Y",
               "_description": "PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_AGENCY"
-            },
-            {
-              "_enum": "Z",
-              "_description": "SHORT_EXEMPT_TRANSACTION_FOR_NON_MEMBER_COMPETING_MARKET_MAKER"
             }
           ]
         },
@@ -3566,14 +2573,6 @@
             {
               "_enum": "6",
               "_description": "SELL_SHORT_EXEMPT"
-            },
-            {
-              "_enum": "7",
-              "_description": "UNDISCLOSED"
-            },
-            {
-              "_enum": "8",
-              "_description": "CROSS"
             }
           ]
         },
@@ -3741,7 +2740,7 @@
         {
           "_number": "70",
           "_name": "AllocID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "71",
@@ -3759,21 +2758,13 @@
             {
               "_enum": "2",
               "_description": "CANCEL"
-            },
-            {
-              "_enum": "3",
-              "_description": "PRELIMINARY"
-            },
-            {
-              "_enum": "4",
-              "_description": "CALCULATED"
             }
           ]
         },
         {
           "_number": "72",
           "_name": "RefAllocID",
-          "_type": "CHAR"
+          "_type": "INT"
         },
         {
           "_number": "73",
@@ -3798,17 +2789,7 @@
         {
           "_number": "77",
           "_name": "OpenClose",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "C",
-              "_description": "CLOSE"
-            },
-            {
-              "_enum": "O",
-              "_description": "OPEN"
-            }
-          ]
+          "_type": "CHAR"
         },
         {
           "_number": "78",
@@ -3874,6 +2855,16 @@
           "_number": "84",
           "_name": "CxlQty",
           "_type": "INT"
+        },
+        {
+          "_number": "85",
+          "_name": "NoDlvyInst",
+          "_type": "INT"
+        },
+        {
+          "_number": "86",
+          "_name": "DlvyInst",
+          "_type": "CHAR"
         },
         {
           "_number": "87",
@@ -3994,17 +2985,7 @@
         {
           "_number": "97",
           "_name": "PossResend",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "N",
-              "_description": "NO"
-            },
-            {
-              "_enum": "Y",
-              "_description": "YES"
-            }
-          ]
+          "_type": "CHAR"
         },
         {
           "_number": "98",
@@ -4049,7 +3030,17 @@
         {
           "_number": "100",
           "_name": "ExDestination",
-          "_type": "CHAR"
+          "_type": "CHAR",
+          "value": [
+            {
+              "_enum": "0",
+              "_description": "NONE"
+            },
+            {
+              "_enum": "4",
+              "_description": "POSIT"
+            }
+          ]
         },
         {
           "_number": "102",
@@ -4090,14 +3081,6 @@
             {
               "_enum": "4",
               "_description": "TOO_LATE_TO_ENTER"
-            },
-            {
-              "_enum": "5",
-              "_description": "UNKNOWN_ORDER"
-            },
-            {
-              "_enum": "6",
-              "_description": "DUPLICATE_ORDER"
             }
           ]
         },
@@ -4136,7 +3119,7 @@
             },
             {
               "_enum": "Q",
-              "_description": "AT_THE_MARKET"
+              "_description": "CURRENT_QUOTE"
             },
             {
               "_enum": "S",
@@ -4157,14 +3140,6 @@
             {
               "_enum": "X",
               "_description": "CROSSING_OPPORTUNITY"
-            },
-            {
-              "_enum": "Y",
-              "_description": "AT_THE_MIDPOINT"
-            },
-            {
-              "_enum": "Z",
-              "_description": "PRE_OPEN"
             }
           ]
         },
@@ -4309,6 +3284,21 @@
           "_type": "INT"
         },
         {
+          "_number": "125",
+          "_name": "CxlType",
+          "_type": "CHAR",
+          "value": [
+            {
+              "_enum": "F",
+              "_description": "FULL_REMAINING_QUANTITY"
+            },
+            {
+              "_enum": "P",
+              "_description": "PARTIAL_CANCEL"
+            }
+          ]
+        },
+        {
           "_number": "126",
           "_name": "ExpireTime",
           "_type": "TIME"
@@ -4441,721 +3431,12 @@
             {
               "_enum": "7",
               "_description": "OTHER"
-            },
-            {
-              "_enum": "8",
-              "_description": "MARKUP"
             }
           ]
         },
         {
           "_number": "140",
           "_name": "PrevClosePx",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "141",
-          "_name": "ResetSeqNumFlag",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "N",
-              "_description": "NO"
-            },
-            {
-              "_enum": "Y",
-              "_description": "YES"
-            }
-          ]
-        },
-        {
-          "_number": "142",
-          "_name": "SenderLocationID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "143",
-          "_name": "TargetLocationID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "144",
-          "_name": "OnBehalfOfLocationID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "145",
-          "_name": "DeliverToLocationID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "146",
-          "_name": "NoRelatedSym",
-          "_type": "INT"
-        },
-        {
-          "_number": "147",
-          "_name": "Subject",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "148",
-          "_name": "Headline",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "149",
-          "_name": "URLLink",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "150",
-          "_name": "ExecType",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "NEW"
-            },
-            {
-              "_enum": "1",
-              "_description": "PARTIAL_FILL"
-            },
-            {
-              "_enum": "2",
-              "_description": "FILL"
-            },
-            {
-              "_enum": "3",
-              "_description": "DONE_FOR_DAY"
-            },
-            {
-              "_enum": "4",
-              "_description": "CANCELLED"
-            },
-            {
-              "_enum": "5",
-              "_description": "REPLACE"
-            },
-            {
-              "_enum": "6",
-              "_description": "PENDING_CANCEL_REPLACE"
-            },
-            {
-              "_enum": "7",
-              "_description": "STOPPED"
-            },
-            {
-              "_enum": "8",
-              "_description": "REJECTED"
-            },
-            {
-              "_enum": "9",
-              "_description": "SUSPENDED"
-            },
-            {
-              "_enum": "A",
-              "_description": "PENDING_NEW"
-            },
-            {
-              "_enum": "B",
-              "_description": "CALCULATED"
-            },
-            {
-              "_enum": "C",
-              "_description": "EXPIRED"
-            }
-          ]
-        },
-        {
-          "_number": "151",
-          "_name": "LeavesQty",
-          "_type": "INT"
-        },
-        {
-          "_number": "152",
-          "_name": "CashOrderQty",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "153",
-          "_name": "AllocAvgPx",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "154",
-          "_name": "AllocNetMoney",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "155",
-          "_name": "SettlCurrFxRate",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "156",
-          "_name": "SettlCurrFxRateCalc",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "M",
-              "_description": "MULTIPLY"
-            },
-            {
-              "_enum": "D",
-              "_description": "DIVIDE"
-            }
-          ]
-        },
-        {
-          "_number": "157",
-          "_name": "NumDaysInterest",
-          "_type": "INT"
-        },
-        {
-          "_number": "158",
-          "_name": "AccruedInterestRate",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "159",
-          "_name": "AccruedInterestAmt",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "160",
-          "_name": "SettlInstMode",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "DEFAULT"
-            },
-            {
-              "_enum": "1",
-              "_description": "STANDING_INSTRUCTIONS_PROVIDED"
-            },
-            {
-              "_enum": "2",
-              "_description": "SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING"
-            },
-            {
-              "_enum": "3",
-              "_description": "SPECIFIC_ALLOCATION_ACCOUNT_STANDING"
-            }
-          ]
-        },
-        {
-          "_number": "161",
-          "_name": "AllocText",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "162",
-          "_name": "SettlInstID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "163",
-          "_name": "SettlInstTransType",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "C",
-              "_description": "CANCEL"
-            },
-            {
-              "_enum": "N",
-              "_description": "NEW"
-            },
-            {
-              "_enum": "R",
-              "_description": "REPLACE"
-            }
-          ]
-        },
-        {
-          "_number": "164",
-          "_name": "EmailThreadID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "165",
-          "_name": "SettlInstSource",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "1",
-              "_description": "BROKERS_INSTRUCTIONS"
-            },
-            {
-              "_enum": "2",
-              "_description": "INSTITUTIONS_INSTRUCTIONS"
-            }
-          ]
-        },
-        {
-          "_number": "166",
-          "_name": "SettlLocation",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "CED",
-              "_description": "CEDEL"
-            },
-            {
-              "_enum": "DTC",
-              "_description": "DEPOSITORY_TRUST_COMPANY"
-            },
-            {
-              "_enum": "EUR",
-              "_description": "EUROCLEAR"
-            },
-            {
-              "_enum": "FED",
-              "_description": "FEDERAL_BOOK_ENTRY"
-            },
-            {
-              "_enum": "ISO Country Code",
-              "_description": "LOCAL_MARKET_SETTLE_LOCATION"
-            },
-            {
-              "_enum": "PNY",
-              "_description": "PHYSICAL"
-            },
-            {
-              "_enum": "PTC",
-              "_description": "PARTICIPANT_TRUST_COMPANY"
-            }
-          ]
-        },
-        {
-          "_number": "167",
-          "_name": "SecurityType",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "BA",
-              "_description": "BANKERS_ACCEPTANCE"
-            },
-            {
-              "_enum": "CD",
-              "_description": "CERTIFICATE_OF_DEPOSIT"
-            },
-            {
-              "_enum": "CMO",
-              "_description": "COLLATERALIZE_MORTGAGE_OBLIGATION"
-            },
-            {
-              "_enum": "CORP",
-              "_description": "CORPORATE_BOND"
-            },
-            {
-              "_enum": "CP",
-              "_description": "COMMERCIAL_PAPER"
-            },
-            {
-              "_enum": "CPP",
-              "_description": "CORPORATE_PRIVATE_PLACEMENT"
-            },
-            {
-              "_enum": "CS",
-              "_description": "COMMON_STOCK"
-            },
-            {
-              "_enum": "FHA",
-              "_description": "FEDERAL_HOUSING_AUTHORITY"
-            },
-            {
-              "_enum": "FHL",
-              "_description": "FEDERAL_HOME_LOAN"
-            },
-            {
-              "_enum": "FN",
-              "_description": "FEDERAL_NATIONAL_MORTGAGE_ASSOCIATION"
-            },
-            {
-              "_enum": "FOR",
-              "_description": "FOREIGN_EXCHANGE_CONTRACT"
-            },
-            {
-              "_enum": "FUT",
-              "_description": "FUTURE"
-            },
-            {
-              "_enum": "GN",
-              "_description": "GOVERNMENT_NATIONAL_MORTGAGE_ASSOCIATION"
-            },
-            {
-              "_enum": "GOVT",
-              "_description": "TREASURIES_PLUS_AGENCY_DEBENTURE"
-            },
-            {
-              "_enum": "MF",
-              "_description": "MUTUAL_FUND"
-            },
-            {
-              "_enum": "MIO",
-              "_description": "MORTGAGE_INTEREST_ONLY"
-            },
-            {
-              "_enum": "MPO",
-              "_description": "MORTGAGE_PRINCIPLE_ONLY"
-            },
-            {
-              "_enum": "MPP",
-              "_description": "MORTGAGE_PRIVATE_PLACEMENT"
-            },
-            {
-              "_enum": "MPT",
-              "_description": "MISCELLANEOUS_PASS_THRU"
-            },
-            {
-              "_enum": "MUNI",
-              "_description": "MUNICIPAL_BOND"
-            },
-            {
-              "_enum": "NONE",
-              "_description": "NO_ISITC_SECURITY_TYPE"
-            },
-            {
-              "_enum": "OPT",
-              "_description": "OPTION"
-            },
-            {
-              "_enum": "PS",
-              "_description": "PREFERRED_STOCK"
-            },
-            {
-              "_enum": "RP",
-              "_description": "REPURCHASE_AGREEMENT"
-            },
-            {
-              "_enum": "RVRP",
-              "_description": "REVERSE_REPURCHASE_AGREEMENT"
-            },
-            {
-              "_enum": "SL",
-              "_description": "STUDENT_LOAN_MARKETING_ASSOCIATION"
-            },
-            {
-              "_enum": "TD",
-              "_description": "TIME_DEPOSIT"
-            },
-            {
-              "_enum": "USTB",
-              "_description": "US_TREASURY_BILL"
-            },
-            {
-              "_enum": "WAR",
-              "_description": "WARRANT"
-            },
-            {
-              "_enum": "ZOO",
-              "_description": "CATS_TIGERS_LIONS"
-            }
-          ]
-        },
-        {
-          "_number": "168",
-          "_name": "EffectiveTime",
-          "_type": "TIME"
-        },
-        {
-          "_number": "169",
-          "_name": "StandInstDbType",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "OTHER"
-            },
-            {
-              "_enum": "1",
-              "_description": "DTC_SID"
-            },
-            {
-              "_enum": "2",
-              "_description": "THOMSON_ALERT"
-            },
-            {
-              "_enum": "3",
-              "_description": "A_GLOBAL_CUSTODIAN"
-            }
-          ]
-        },
-        {
-          "_number": "170",
-          "_name": "StandInstDbName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "171",
-          "_name": "StandInstDbID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "172",
-          "_name": "SettlDeliveryType",
-          "_type": "INT"
-        },
-        {
-          "_number": "173",
-          "_name": "SettlDepositoryCode",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "174",
-          "_name": "SettlBrkrCode",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "175",
-          "_name": "SettlInstCode",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "176",
-          "_name": "SecuritySettlAgentName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "177",
-          "_name": "SecuritySettlAgentCode",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "178",
-          "_name": "SecuritySettlAgentAcctNum",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "179",
-          "_name": "SecuritySettlAgentAcctName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "180",
-          "_name": "SecuritySettlAgentContactName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "181",
-          "_name": "SecuritySettlAgentContactPhone",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "182",
-          "_name": "CashSettlAgentName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "183",
-          "_name": "CashSettlAgentCode",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "184",
-          "_name": "CashSettlAgentAcctNum",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "185",
-          "_name": "CashSettlAgentAcctName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "186",
-          "_name": "CashSettlAgentContactName",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "187",
-          "_name": "CashSettlAgentContactPhone",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "188",
-          "_name": "BidSpotRate",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "189",
-          "_name": "BidForwardPoints",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "190",
-          "_name": "OfferSpotRate",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "191",
-          "_name": "OfferForwardPoints",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "192",
-          "_name": "OrderQty2",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "193",
-          "_name": "FutSettDate2",
-          "_type": "DATE"
-        },
-        {
-          "_number": "194",
-          "_name": "LastSpotRate",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "195",
-          "_name": "LastForwardPoints",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "196",
-          "_name": "AllocLinkID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "197",
-          "_name": "AllocLinkType",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "F_X_NETTING"
-            },
-            {
-              "_enum": "1",
-              "_description": "F_X_SWAP"
-            }
-          ]
-        },
-        {
-          "_number": "198",
-          "_name": "SecondaryOrderID",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "199",
-          "_name": "NoIOIQualifiers",
-          "_type": "INT"
-        },
-        {
-          "_number": "200",
-          "_name": "MaturityMonthYear",
-          "_type": "MONTHYEAR"
-        },
-        {
-          "_number": "201",
-          "_name": "PutOrCall",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "PUT"
-            },
-            {
-              "_enum": "1",
-              "_description": "CALL"
-            }
-          ]
-        },
-        {
-          "_number": "202",
-          "_name": "StrikePrice",
-          "_type": "FLOAT"
-        },
-        {
-          "_number": "203",
-          "_name": "CoveredOrUncovered",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "COVERED"
-            },
-            {
-              "_enum": "1",
-              "_description": "UNCOVERED"
-            }
-          ]
-        },
-        {
-          "_number": "204",
-          "_name": "CustomerOrFirm",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "0",
-              "_description": "CUSTOMER"
-            },
-            {
-              "_enum": "1",
-              "_description": "FIRM"
-            }
-          ]
-        },
-        {
-          "_number": "205",
-          "_name": "MaturityDay",
-          "_type": "DAYOFMONTH"
-        },
-        {
-          "_number": "206",
-          "_name": "OptAttribute",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "207",
-          "_name": "SecurityExchange",
-          "_type": "CHAR"
-        },
-        {
-          "_number": "208",
-          "_name": "NotifyBrokerOfCredit",
-          "_type": "CHAR",
-          "value": [
-            {
-              "_enum": "N",
-              "_description": "NO"
-            },
-            {
-              "_enum": "Y",
-              "_description": "YES"
-            }
-          ]
-        },
-        {
-          "_number": "209",
-          "_name": "AllocHandlInst",
-          "_type": "INT",
-          "value": [
-            {
-              "_enum": "1",
-              "_description": "MATCH"
-            },
-            {
-              "_enum": "2",
-              "_description": "FORWARD"
-            },
-            {
-              "_enum": "3",
-              "_description": "FORWARD_AND_MATCH"
-            }
-          ]
-        },
-        {
-          "_number": "210",
-          "_name": "MaxShow",
-          "_type": "INT"
-        },
-        {
-          "_number": "211",
-          "_name": "PegDifference",
           "_type": "FLOAT"
         }
       ]
